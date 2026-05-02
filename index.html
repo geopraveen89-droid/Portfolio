@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Praveen George | Content Portfolio</title>
+<meta name="description" content="Praveen George — Research Analyst & Financial Content Creator. 156+ blog articles and 26+ YouTube videos covering industry analysis, company fundamentals, options, and investing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ───────────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0f1e;color:#e2e8f0;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+::selection{background:rgba(99,102,241,0.4)}
+
+/* ── ANIMATED BG ────────────────────────────────────────── */
+.bg-grid{position:fixed;inset:0;z-index:0;opacity:0.03;
+  background-image:linear-gradient(rgba(255,255,255,0.1) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,0.1) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none}
+
+/* ── HERO ───────────────────────────────────────────────── */
+.hero{position:relative;padding:100px 40px 80px;text-align:center;overflow:hidden;z-index:1}
+.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;filter:blur(120px);opacity:0.15;pointer-events:none}
+.hero-glow.g1{top:-200px;left:20%;background:#6366f1}
+.hero-glow.g2{bottom:-250px;right:15%;background:#8b5cf6}
+.hero-glow.g3{top:50%;left:60%;background:#3b82f6;width:400px;height:400px;opacity:0.08}
+
+.hero-badge{display:inline-flex;align-items:center;gap:8px;
+  background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.3);
+  color:#818cf8;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  padding:8px 20px;border-radius:99px;margin-bottom:28px;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#818cf8;
+  animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
+
+.hero h1{font-size:clamp(2.4rem,5.5vw,4rem);font-weight:900;letter-spacing:-1.5px;
+  background:linear-gradient(135deg,#ffffff 0%,#c7d2fe 40%,#818cf8 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;margin-bottom:16px;line-height:1.1}
+.hero-role{font-size:1.15rem;color:#f1f5f9;font-weight:500;margin-bottom:6px}
+.hero-org{font-size:1rem;color:#c7d2fe;font-weight:600;letter-spacing:0.5px}
+.hero-desc{max-width:600px;margin:24px auto 0;color:#e2e8f0;font-size:0.95rem;line-height:1.7}
+.hero-cta{display:flex;justify-content:center;gap:14px;margin-top:36px;flex-wrap:wrap}
+.btn{padding:12px 28px;border-radius:10px;font-size:0.88rem;font-weight:600;
+  transition:all 0.25s ease;cursor:pointer;border:none;font-family:inherit}
+.btn-primary{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;
+  box-shadow:0 4px 20px rgba(99,102,241,0.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(99,102,241,0.4)}
+.btn-secondary{background:rgba(255,255,255,0.05);color:#c7d2fe;border:1px solid rgba(99,102,241,0.3)}
+.btn-secondary:hover{background:rgba(99,102,241,0.15);border-color:#6366f1}
+
+/* ── STATS ──────────────────────────────────────────────── */
+.stats{display:flex;justify-content:center;gap:2px;padding:0 40px;margin-top:-20px;position:relative;z-index:2}
+.stat{flex:0 1 200px;padding:32px 20px;text-align:center;
+  background:rgba(30,41,59,0.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(51,65,85,0.5);transition:border-color 0.3s}
+.stat:first-child{border-radius:16px 0 0 16px}
+.stat:last-child{border-radius:0 16px 16px 0}
+.stat:hover{border-color:rgba(99,102,241,0.4)}
+.stat-num{font-size:2.5rem;font-weight:900;letter-spacing:-1px;
+  background:linear-gradient(135deg,#818cf8,#c084fc);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:0.7rem;color:#64748b;text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;font-weight:600}
+
+/* ── TAB NAV ────────────────────────────────────────────── */
+.tab-nav{display:flex;justify-content:center;gap:6px;padding:48px 40px 0;position:relative;z-index:2}
+.tab-btn{background:rgba(30,41,59,0.4);border:1px solid rgba(51,65,85,0.5);color:#94a3b8;
+  padding:11px 32px;border-radius:10px;font-size:0.88rem;font-weight:600;cursor:pointer;
+  transition:all 0.25s;font-family:inherit;backdrop-filter:blur(8px)}
+.tab-btn.active{background:linear-gradient(135deg,#6366f1,#7c3aed);border-color:transparent;color:#fff;
+  box-shadow:0 4px 20px rgba(99,102,241,0.25)}
+.tab-btn:not(.active):hover{background:rgba(99,102,241,0.1);border-color:rgba(99,102,241,0.3);color:#c7d2fe}
+
+/* ── CONTENT ────────────────────────────────────────────── */
+.tab-content{display:none;padding:32px 40px 60px;max-width:1140px;margin:0 auto;position:relative;z-index:2}
+.tab-content.active{display:block}
+
+/* ── FILTER PILLS ───────────────────────────────────────── */
+.filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;justify-content:center}
+.pill{background:rgba(30,41,59,0.6);border:1px solid rgba(51,65,85,0.5);color:#94a3b8;
+  padding:7px 18px;border-radius:99px;font-size:0.78rem;font-weight:600;cursor:pointer;
+  transition:all 0.2s;font-family:inherit}
+.pill:hover{border-color:var(--pill-color,#6366f1);color:var(--pill-color,#6366f1)}
+.pill.active{background:rgba(99,102,241,0.15);border-color:#6366f1;color:#818cf8}
+
+/* ── BLOG CARDS ─────────────────────────────────────────── */
+.cat-section{margin-bottom:24px;background:rgba(30,41,59,0.4);border-radius:16px;overflow:hidden;
+  border:1px solid rgba(51,65,85,0.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  transition:opacity 0.4s,transform 0.4s}
+.cat-section.hidden{display:none}
+.cat-header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;
+  background:var(--cat-bg,rgba(99,102,241,0.08))}
+.cat-left{display:flex;align-items:center;gap:10px}
+.cat-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.cat-name{font-weight:700;font-size:0.95rem;color:#f1f5f9}
+.cat-count{font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:99px}
+.blog-list{border-top:1px solid rgba(51,65,85,0.4)}
+.blog-item{display:flex;align-items:center;gap:16px;padding:14px 24px;
+  border-bottom:1px solid rgba(30,41,59,0.6);transition:all 0.2s;color:#cbd5e1}
+.blog-item:last-child{border-bottom:none}
+.blog-item:hover{background:rgba(99,102,241,0.06);color:#fff;padding-left:28px}
+.blog-title{font-size:0.88rem;flex:1;line-height:1.4}
+.blog-date{font-size:0.75rem;color:#475569;white-space:nowrap;flex-shrink:0}
+.blog-arrow{font-size:0.85rem;color:#475569;transition:all 0.2s;flex-shrink:0}
+.blog-item:hover .blog-arrow{color:#818cf8;transform:translate(2px,-2px)}
+
+/* ── VIDEO GRID ─────────────────────────────────────────── */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.video-card{background:rgba(30,41,59,0.5);border:1px solid rgba(51,65,85,0.4);border-radius:16px;
+  overflow:hidden;transition:all 0.3s;display:block;backdrop-filter:blur(8px)}
+.video-card:hover{transform:translateY(-6px);border-color:rgba(99,102,241,0.5);
+  box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+.video-thumb{position:relative;aspect-ratio:16/9;background:#1e293b;overflow:hidden}
+.video-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.video-card:hover .video-thumb img{transform:scale(1.05)}
+.video-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.3);opacity:0;transition:opacity 0.3s}
+.video-card:hover .video-play{opacity:1}
+.video-play svg{filter:drop-shadow(0 2px 8px rgba(0,0,0,0.5))}
+.video-dur{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.85);color:#fff;
+  font-size:0.72rem;font-weight:700;padding:3px 8px;border-radius:6px;letter-spacing:0.5px}
+.video-info{padding:16px 18px}
+.video-title{font-size:0.85rem;font-weight:600;color:#e2e8f0;line-height:1.5;margin-bottom:8px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.video-month{font-size:0.75rem;color:#64748b;font-weight:500}
+
+/* ── SCROLL ANIMATIONS ──────────────────────────────────── */
+.anim{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}
+.anim.visible{opacity:1;transform:translateY(0)}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+footer{text-align:center;padding:50px 40px;color:#334155;font-size:0.8rem;
+  border-top:1px solid rgba(30,41,59,0.8);position:relative;z-index:2}
+footer a{color:#6366f1;font-weight:600;transition:color 0.2s}
+footer a:hover{color:#818cf8}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:768px){
+  .hero{padding:60px 20px 50px}
+  .stats{flex-wrap:wrap;padding:0 20px;gap:8px;margin-top:-10px}
+  .stat{flex:1 1 30%;min-width:100px;border-radius:12px!important;border:1px solid rgba(51,65,85,0.5)}
+  .tab-content{padding:20px 16px 40px}
+  .cat-header{padding:14px 16px}
+  .blog-item{padding:12px 16px;flex-wrap:wrap;gap:4px}
+  .blog-date{width:100%;text-align:right}
+  .video-grid{grid-template-columns:1fr}
+  .filter-bar{gap:6px}
+  .pill{padding:6px 12px;font-size:0.72rem}
+  .hero-cta{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+<div class="bg-grid"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+  <div class="hero-glow g3"></div>
+  <div class="hero-badge">Content Portfolio</div>
+  <h1>Praveen George</h1>
+  <p class="hero-role">Research Analyst &amp; Financial Content Creator</p>
+  <p class="hero-org">Tradejini Financial Services</p>
+  <p class="hero-desc">Deep-dive industry reports, company fundamental analysis, options education, and investment explainers &mdash; built for investors and traders.</p>
+  <div class="hero-cta">
+    <a href="#blogs" class="btn btn-primary" onclick="showTab('blogs',document.querySelector('[data-tab=blogs]'))">Explore Articles</a>
+    <a href="#videos" class="btn btn-secondary" onclick="showTab('videos',document.querySelector('[data-tab=videos]'))">Watch Videos</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-num">156+</div><div class="stat-label">Blog Articles</div></div>
+  <div class="stat"><div class="stat-num">10</div><div class="stat-label">Categories</div></div>
+  <div class="stat"><div class="stat-num">26</div><div class="stat-label">YouTube Videos</div></div>
+</div>
+
+<!-- TABS -->
+<div class="tab-nav">
+  <button class="tab-btn active" data-tab="blogs" onclick="showTab('blogs',this)">Written Articles</button>
+  <button class="tab-btn" data-tab="videos" onclick="showTab('videos',this)">YouTube Videos</button>
+</div>
+
+<!-- BLOGS -->
+<div id="blogs" class="tab-content active">
+  <div class="filter-bar">
+    <button class="pill active" data-cat="all">All</button>
+<button class="pill" data-cat="Industry &amp; Sector Reports" style="--pill-color:#10b981">Industry &amp; Sector Reports</button>
+<button class="pill" data-cat="Company Analysis" style="--pill-color:#3b82f6">Company Analysis</button>
+<button class="pill" data-cat="NxtOption" style="--pill-color:#8b5cf6">NxtOption</button>
+<button class="pill" data-cat="Technical Analysis" style="--pill-color:#f59e0b">Technical Analysis</button>
+<button class="pill" data-cat="Stock Market Basics" style="--pill-color:#06b6d4">Stock Market Basics</button>
+<button class="pill" data-cat="CubePlus Trading" style="--pill-color:#ec4899">CubePlus Trading</button>
+<button class="pill" data-cat="Business Decoded" style="--pill-color:#ef4444">Business Decoded</button>
+<button class="pill" data-cat="Personal Finance" style="--pill-color:#14b8a6">Personal Finance</button>
+<button class="pill" data-cat="Mutual Funds" style="--pill-color:#22c55e">Mutual Funds</button>
+<button class="pill" data-cat="Market Updates" style="--pill-color:#f97316">Market Updates</button>
+
+  </div>
+  <div class="cat-section anim" data-category="Industry &amp; Sector Reports">
+  <div class="cat-header" style="--cat-color:#10b981;--cat-bg:rgba(16,185,129,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#10b981"></span><span class="cat-name">Industry &amp; Sector Reports</span></div>
+    <span class="cat-count" style="background:rgba(16,185,129,0.15);color:#10b981">20</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/navigating--indias-wastewater-treatment-mega-cycle" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Navigating India&#x27;s Wastewater Treatment Mega Cycle</span>
+      <span class="blog-date">27th Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/sector-analysis-of-the-indian-automotive-component-industry" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Sector Analysis of the Indian Automotive Component Industry</span>
+      <span class="blog-date">17th Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/strategic-outlook-of-the-indian-tea-and-coffee-sector" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Strategic Outlook of The Indian Tea and Coffee Sector</span>
+      <span class="blog-date">10th Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/evaluating-indias-cement-industry-amid-structural-tailwinds" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Evaluating India&#x27;s Cement Industry Amid Structural Tailwinds</span>
+      <span class="blog-date">27th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/a-sectoral-breakdown-of-indias-cables-and-wires-industry" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">A Sectoral Breakdown of India&#x27;s Cables and Wires Industry</span>
+      <span class="blog-date">13th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/a-comprehensive-analysis-of-indias-logistics-and-supply-chain-sector-part-2" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">A Comprehensive Analysis of India&#x27;s Logistics and Supply Chain Sector Pt 2/2</span>
+      <span class="blog-date">19th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/a-comprehensive-analysis-of-indias-logistics-and-supply-chain-sector-part-1" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">A Comprehensive Analysis of India&#x27;s Logistics and Supply Chain Sector Pt 1/2</span>
+      <span class="blog-date">12th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/the-packaging-industry-in-india-structure-enduse-demand-and-industry-dynamics" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">The Packaging Industry in India – Structure, End-Use Demand &amp; Industry Dynamics</span>
+      <span class="blog-date">6th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/indias-fertilizer-industry-market-trends-and-future-prospects" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">India&#x27;s Fertilizer Industry, Market Trends and Future Prospects</span>
+      <span class="blog-date">30th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/a-fundamental-perspective-of-the-indian-alcohol-industry" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">A Fundamental Perspective of the Indian Alcohol Industry</span>
+      <span class="blog-date">26th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/indias-maritime-economy--complete-sector-analysis--part-33" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">India&#x27;s Maritime Economy — Complete Sector Analysis (Part 3/3)</span>
+      <span class="blog-date">1st Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/indias-maritime-economy--complete-sector-analysis--part-23" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">India&#x27;s Maritime Economy — Complete Sector Analysis (Part 2/3)</span>
+      <span class="blog-date">24th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/indias-maritime-economy--complete-sector-analysis--part-13" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">India&#x27;s Maritime Economy — Complete Sector Analysis (Part 1/3)</span>
+      <span class="blog-date">19th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/why-india-could-become-the-worlds-fastestgrowing-hospitality-market" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Why India Could Become the World&#x27;s Fastest-Growing Hospitality Market</span>
+      <span class="blog-date">5th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/the-business-of-sustainability-inside-indias-recycling-boom" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">The Business of Sustainability: Inside India&#x27;s Recycling Boom</span>
+      <span class="blog-date">15th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/unlocking-growth-in-indias-90-billion-jewellery-industry" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Unlocking Growth in India&#x27;s $90 Billion Jewellery Industry</span>
+      <span class="blog-date">25th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/a-comprehensive-industry-analysis-of-indias-hospital-sector" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">A Comprehensive Industry Analysis of India&#x27;s Hospital Sector</span>
+      <span class="blog-date">12th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/portled-development-in-india-a-sectoral-outlook-to-fy30" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Port-led Development in India: A Sectoral Outlook</span>
+      <span class="blog-date">19th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/analyzing-indias-battery-sector-through-amara-raja-and-exide" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Analyzing India&#x27;s Battery Sector Through Amara Raja and Exide</span>
+      <span class="blog-date">24th Apr 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/indias-cdmo-boom-a-rising-global-powerhouse" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">India&#x27;s CDMO Boom: A Rising Global Powerhouse</span>
+      <span class="blog-date">7th Apr 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+<div class="cat-section anim" data-category="Company Analysis">
+  <div class="cat-header" style="--cat-color:#3b82f6;--cat-bg:rgba(59,130,246,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#3b82f6"></span><span class="cat-name">Company Analysis</span></div>
+    <span class="cat-count" style="background:rgba(59,130,246,0.15);color:#3b82f6">43</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/samhi-hotels-limited-a-fundamental-analysis-of-the-turnaround-case" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Samhi Hotels Limited - A Fundamental Analysis of the Turnaround Case</span>
+      <span class="blog-date">3rd Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/analysing-itc-limiteds-deep-value-and-structural-growth" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Analysing ITC Limited&#x27;s Deep Value and Structural Growth</span>
+      <span class="blog-date">18th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/from-capex-to-catalyst-decoding-tarsons-products-framework" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">From Capex to Catalyst — Decoding Tarsons Products&#x27; Framework</span>
+      <span class="blog-date">5th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/dissecting-vaibhav-globals-niche-retail-model-at-scale" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Dissecting Vaibhav Global&#x27;s Niche Retail Model at Scale</span>
+      <span class="blog-date">28th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/a-year-of-execution-and-strategic-transformation-at-laurus-labs-ltd" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">A Year of Execution and Strategic Transformation at Laurus Labs Ltd.</span>
+      <span class="blog-date">22nd Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/zuari-industries-limited-viewed-through-assets-and-capital-returns" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Zuari Industries Limited Viewed Through Assets and Capital Returns</span>
+      <span class="blog-date">16th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/seamec-ltd-operating-an-assetdriven-offshore-services-business" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Seamec Ltd Operating an Asset-Driven Offshore Services Business</span>
+      <span class="blog-date">8th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/abs-marine-anchoring-growth-with-longterm-offshore-contracts" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">ABS Marine Anchoring Growth with Long-Term Offshore Contracts</span>
+      <span class="blog-date">19th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/control-print-ltd-at-the-center-of-indias-coding-and-marking-ecosystem" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Control Print Ltd at the Center of India&#x27;s Coding and Marking Ecosystem</span>
+      <span class="blog-date">10th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/q2-fy26-performance-review-of-entero-senores-acutaas-alkem-and-laurus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Q2 FY26 Performance Review of Entero, Senores, Acutaas, Alkem and Laurus</span>
+      <span class="blog-date">6th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/a-performance-review-of-gravita-india-va-tech-wabag-and-deep-industries" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">A Performance Review of Gravita India, VA Tech Wabag, and Deep Industries</span>
+      <span class="blog-date">10th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/is-thyrocare-entering-its-most-profitable-phase-yet" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Is Thyrocare Entering Its Most Profitable Phase Yet?</span>
+      <span class="blog-date">4th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/is-action-construction-equipment-rising-to-become-indias-biggest-equipment-powerhouse" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Is Action Construction Equipment Rising to Become India&#x27;s Biggest Equipment Powerhouse?</span>
+      <span class="blog-date">28th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/petronet-lng-is-driving-indias-next-wave-of-gas-demand" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Petronet LNG is Driving India&#x27;s Next Wave of Gas Demand</span>
+      <span class="blog-date">23rd Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/can-vbl-defend-its-moat-against-new-challengers" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Can VBL Defend Its Moat Against New Challengers?</span>
+      <span class="blog-date">10th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/could-laxmi-dental-be-the-hidden-gem-in-healthcare" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Could Laxmi Dental Be the Hidden Gem in Healthcare? (co-authored)</span>
+      <span class="blog-date">4th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/sky-gold-capturing-market-opportunities-in-jewelry" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Sky Gold Capturing Market Opportunities in Jewelry</span>
+      <span class="blog-date">25th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/igi-india--a-unique-niche-business-with-industry-potential" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">IGI India – A Unique Niche Business with Industry Potential</span>
+      <span class="blog-date">18th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/is-varrocs-market-valuation-on-solid-footing" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Is Varroc&#x27;s Market Valuation on Solid Footing?</span>
+      <span class="blog-date">11th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/structural-growth-outlook-for-ge-vernova-in-a-transforming-energy-landscape" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Structural Growth Outlook for GE Vernova in a Transforming Energy Landscape</span>
+      <span class="blog-date">6th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/ajax-engineering-a-strong-play-on-indias-infrastructure-mechanisation" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Ajax Engineering A Strong Play on India&#x27;s Infrastructure Mechanisation</span>
+      <span class="blog-date">30th Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/honeywell-automation-india-positioned-for-longterm-value-creation" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Honeywell Automation India Positioned for Long-Term Value Creation</span>
+      <span class="blog-date">22nd Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/jyoti-cnc-poised-for-the-next-growth-phase" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Jyoti CNC Poised for the Next Growth Phase</span>
+      <span class="blog-date">16th Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/alkem-laboratories-riding-on-resilient-growth" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Alkem Laboratories Riding on Resilient Growth</span>
+      <span class="blog-date">7th Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/biocon-limiteds-strategic-growth-in-generics-biosimilars--research-services" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Biocon Limited&#x27;s Strategic Growth in Generics, Biosimilars &amp; Research Services (co-authored)</span>
+      <span class="blog-date">2nd Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/assessing-valuation-and-opportunity-in-tata-chemicals" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Assessing Valuation and Opportunity in Tata Chemicals</span>
+      <span class="blog-date">31st Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/bls-international-a-scalable-play-on-visa-and-citizen-services" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">BLS International A Scalable Play on Visa and Citizen Services</span>
+      <span class="blog-date">30th Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/pg-electroplast-where-indias-consumer-electronics-take-shape" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">PG Electroplast Where India&#x27;s Consumer Electronics Take Shape</span>
+      <span class="blog-date">23rd Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/engineering-defense-growth-with-cff-fluid-control-ltd" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Engineering Defense Growth with CFF Fluid Control Ltd.</span>
+      <span class="blog-date">16th Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/acutaas-chemicals-ltd-on-a--growth-track-in-specialty-chemicals-and-cdmo" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Acutaas Chemicals Ltd on a Growth Track in Specialty Chemicals and CDMO</span>
+      <span class="blog-date">5th Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/praveg-ltd-positioned-for-margin-expansion-and-longterm-profitability" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Praveg Ltd. Positioned for Margin Expansion and Long-Term Profitability</span>
+      <span class="blog-date">2nd Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/analyzing-karnataka-banks-transformation-and-financial-strength" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Analyzing Karnataka Bank&#x27;s Transformation and Financial Strength</span>
+      <span class="blog-date">30th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/senores-pharma-capitalizing-on-cdmo-tailwinds-for-global-ascent" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Senores Pharma Capitalizing on CDMO Tailwinds for Global Ascent</span>
+      <span class="blog-date">10th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/positioning-va-tech-wabag-as-a-global-leader-in-water-solutions" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Watertech Leader Transforming Dirty Water into Liquid Gold (VA Tech Wabag)</span>
+      <span class="blog-date">6th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/capacite-infraprojects-unlocking-urban-growth" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Capacit&#x27;e Infraprojects Unlocking Urban Growth</span>
+      <span class="blog-date">31st May 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/s-h-kelkar-and-company-strengthens-market-presence-through-innovation" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">S H Kelkar and Company Strengthens Market Presence Through Innovation</span>
+      <span class="blog-date">28th May 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/gravita-indias-recycling-leadership-with-a-global-edge" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Gravita India&#x27;s Recycling Leadership with a Global Edge</span>
+      <span class="blog-date">23rd May 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/deep-industries-as-a-proxy-play-on-oil-and-gas" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Deep Industries as a Proxy Play on Oil and Gas</span>
+      <span class="blog-date">20th May 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-zaggle-is-driving-business-agility-through-saas--fintech" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How Zaggle is Driving Business Agility Through SaaS &amp; FinTech</span>
+      <span class="blog-date">9th May 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/mahindra-logistics-positioned-for-transformational-revenue-growth" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Mahindra Logistics Positioned for Transformational Revenue Growth</span>
+      <span class="blog-date">7th May 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/entero-healthcare-solutions-and-the-transformation-of-healthcare-distribution" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Entero Healthcare Solutions and the Transformation of Healthcare Distribution</span>
+      <span class="blog-date">21st Apr 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/indias-infra-growth-open-doors-for-interarch" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">India&#x27;s Infra Growth Open Doors for Interarch</span>
+      <span class="blog-date">11th Apr 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-rategain-is-unlocking-2000-cr-potential" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How RateGain is Unlocking ₹2000 Cr Potential</span>
+      <span class="blog-date">25th Mar 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+<div class="cat-section anim" data-category="NxtOption">
+  <div class="cat-header" style="--cat-color:#8b5cf6;--cat-bg:rgba(139,92,246,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#8b5cf6"></span><span class="cat-name">NxtOption</span></div>
+    <span class="cat-count" style="background:rgba(139,92,246,0.15);color:#8b5cf6">16</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/trading-volatility-across-time-with-calendar-spreads--part-2" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Trading Volatility Across Time with Calendar Spreads — Part 2/2</span>
+      <span class="blog-date">28th Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/trading-volatility-across-time-with-calendar-spreads-part-12" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Trading Volatility Across Time with Calendar Spreads — Part 1/2</span>
+      <span class="blog-date">14th Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/a-walkthrough-of-the-nxtoption-simulator" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">A Walkthrough of the NxtOption Simulator</span>
+      <span class="blog-date">3rd Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-nxtoption-embeds-your-positions-directly-into-the-option-chain" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How NxtOption Embeds Your Positions Directly Into the Option Chain</span>
+      <span class="blog-date">25th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/understanding-shift-width-and-hedge-in-nxtoption-strategy-builder" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Understanding Shift, Width, and Hedge in NxtOption Strategy Builder</span>
+      <span class="blog-date">23rd Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/simplify-your-options-trading-with-strategy-watch-on-nxtoption" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Simplify Your Options Trading with Strategy Watch on NxtOption</span>
+      <span class="blog-date">9th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-use-nxtoptions-group-adjust-feature" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Use NxtOption&#x27;s Group Adjust Feature</span>
+      <span class="blog-date">25th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/nxtoption-strategy-watch-explained" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">NxtOption Strategy Watch Explained</span>
+      <span class="blog-date">16th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/nxtoption-alerts-for-smarter-strategylevel-monitoring" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">NxtOption Alerts for Smarter Strategy-Level Monitoring</span>
+      <span class="blog-date">10th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-use-the-multistrike-oi-chart-on-nxtoption" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Use the MultiStrike OI Chart on NxtOption</span>
+      <span class="blog-date">3rd Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/rolling-an-open-position-with-adjust-button-in-nxtoption" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Rolling an Open Position with Adjust Button in NxtOption</span>
+      <span class="blog-date">17th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/credit-spread-vs-debit-spread-explained" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Credit Spread vs Debit Spread Explained</span>
+      <span class="blog-date">1st Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/the-iron-condor-a-neutral-strategy-for-sideways-markets" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">The Iron Condor: A Neutral Strategy for Sideways Markets</span>
+      <span class="blog-date">29th Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-trade-reversals-with-bull-put-spreads" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Trade Reversals with Bull Put Spreads</span>
+      <span class="blog-date">1st Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-interpret-open-interest-and-price-data-a-traders-guide" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Interpret Open Interest and Price Data: A Trader&#x27;s Guide</span>
+      <span class="blog-date">25th Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/call-ratio-spread-explained-through-real-trades" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Call Ratio Spread Explained Through Real Trades</span>
+      <span class="blog-date">14th Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+<div class="cat-section anim" data-category="Technical Analysis">
+  <div class="cat-header" style="--cat-color:#f59e0b;--cat-bg:rgba(245,158,11,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#f59e0b"></span><span class="cat-name">Technical Analysis</span></div>
+    <span class="cat-count" style="background:rgba(245,158,11,0.15);color:#f59e0b">4</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/lesserknown-candlestick-patterns-for-big-moves" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Lesser-Known Candlestick Patterns for Big Moves</span>
+      <span class="blog-date">7th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-mcginley-dynamic-and-majority-rule-improve-trend-decisions" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How McGinley Dynamic and Majority Rule Improve Trend Decisions</span>
+      <span class="blog-date">27th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/understanding-heikin-ashi-candles-for-trend-trading" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Understanding Heikin Ashi Candles for Trend Trading</span>
+      <span class="blog-date">10th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/understanding-market-participation-through-positive-and-negative-volume-indices" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Understanding Market Participation Through Positive and Negative Volume Indices</span>
+      <span class="blog-date">12th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+<div class="cat-section anim" data-category="Stock Market Basics">
+  <div class="cat-header" style="--cat-color:#06b6d4;--cat-bg:rgba(6,182,212,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#06b6d4"></span><span class="cat-name">Stock Market Basics</span></div>
+    <span class="cat-count" style="background:rgba(6,182,212,0.15);color:#06b6d4">22</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/7-ways-to-value-a-stock-and-what-each-one-actually-tells-you" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">7 Ways to Value a Stock and What Each One Actually Tells You</span>
+      <span class="blog-date">15th Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/the-crudenifty-inverse-relationship-why-data-disagrees" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">The Crude-Nifty Inverse Relationship, Why Data Disagrees</span>
+      <span class="blog-date">16th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/what-is-highfrequency-trading-hft" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">What Is High-Frequency Trading (HFT)?</span>
+      <span class="blog-date">28th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-invest-during-quarterly-results" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Invest During Quarterly Results</span>
+      <span class="blog-date">21st Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/enron-corporation-and-the-corporate-fraud-that-misled-markets" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Enron Corporation and the Corporate Fraud That Misled Markets</span>
+      <span class="blog-date">5th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/tulip-mania-and-the-birth-of-financial-bubbles" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Tulip Mania and the Birth of Financial Bubbles</span>
+      <span class="blog-date">30th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/investment-options-to-park-idle-cash-in-india" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Investment Options to Park Idle Cash in India</span>
+      <span class="blog-date">24th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/why-the-early-years-of-compounding-make-progress-feel-invisible" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Why the Early Years of Compounding Make Progress Feel Invisible</span>
+      <span class="blog-date">17th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/the-philip-fisher-approach-to-owning-stocks-like-a-business-owner" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">The Philip Fisher Approach to Owning Stocks Like a Business Owner</span>
+      <span class="blog-date">25th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/pair-trading-made-simple-with-a-clear-look-at-statistical-arbitrage-in-india" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Pair Trading Made Simple with a Clear Look at Statistical Arbitrage in India</span>
+      <span class="blog-date">17th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-peter-lynch-picked-winning-stocks--a-simple-look-at-his-investment-strategy" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How Peter Lynch Picked Winning Stocks — A Simple Look at His Investment Strategy</span>
+      <span class="blog-date">6th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/what-sun-tzu-can-teach-modern-traders-and-investors" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">What Sun Tzu Can Teach Modern Traders and Investors</span>
+      <span class="blog-date">24th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-debtor-days-reveal-financial-strength" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How Debtor Days Reveal Financial Strength</span>
+      <span class="blog-date">16th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-game-theory-can-help-you-predict-moves-in-the-indian-stock-market" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How Game Theory Can Help You Predict Moves in the Indian Stock Market</span>
+      <span class="blog-date">16th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/capital-required-for-option-selling" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Capital Required for Option Selling</span>
+      <span class="blog-date">8th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-brokers--institutions-hunt-stop-losses-theory-motives--scenarios-in-indian-markets" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How Brokers &amp; Institutions &#x27;Hunt&#x27; Stop Losses: Theory, Motives &amp; Scenarios</span>
+      <span class="blog-date">26th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/is-option-selling-profitable-strategies-risks-and-market-insights" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Is Option Selling Profitable? Strategies, Risks and Market Insights</span>
+      <span class="blog-date">17th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/pump-and-dump-schemes-explained-for-investors" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Pump and Dump Schemes Explained for Investors</span>
+      <span class="blog-date">10th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-invest-in-american-stocks-with-tradejini-inx-ga-a-stepbystep-guide" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Invest in American Stocks with Tradejini INX GA (co-authored)</span>
+      <span class="blog-date">12th Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/understanding-stock-valuation-through-key-financial-ratios" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Understanding Stock Valuation Through Key Financial Ratios</span>
+      <span class="blog-date">11th Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/what-is-percentage-gain" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">What is Percentage Gain?</span>
+      <span class="blog-date">4th Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/golds-journey-through-markets-technology--global-power-plays" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Gold&#x27;s Journey Through Markets, Technology &amp; Global Power Plays (co-authored)</span>
+      <span class="blog-date">2nd Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+<div class="cat-section anim" data-category="CubePlus Trading">
+  <div class="cat-header" style="--cat-color:#ec4899;--cat-bg:rgba(236,72,153,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#ec4899"></span><span class="cat-name">CubePlus Trading</span></div>
+    <span class="cat-count" style="background:rgba(236,72,153,0.15);color:#ec4899">22</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/using--pivot-points-for-precise-entry-and-exit-decisions-on-cubeplus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Using Pivot Points for Precise Entry and Exit Decisions on CubePlus</span>
+      <span class="blog-date">21st Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/aftermarket-orders-explained" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">After-Market Orders Explained</span>
+      <span class="blog-date">8th Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/share-import-and-build-smarter-watchlists-on-cubeplus-mobile" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Share, Import and Build Smarter Watchlists on CubePlus Mobile</span>
+      <span class="blog-date">4th Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-place-a-cover-order-on-cubeplus-for-options-trading" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Place a Cover Order on CubePlus for Options Trading</span>
+      <span class="blog-date">25th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-place-gtt-orders-on-cubeplus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Place GTT Orders on Cubeplus</span>
+      <span class="blog-date">19th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-set-up-and-manage-your-watchlists-on-cubeplus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Set Up and Manage Your Watchlists on CubePlus</span>
+      <span class="blog-date">10th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/guide-to-order-execution-and-management-on-cubeplus-scalper-mode" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Guide to Order Execution and Management on CubePlus Scalper Mode</span>
+      <span class="blog-date">7th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-use-cubeplus-alerts-to-trade-with-precision" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Use CubePlus Alerts to Trade with Precision</span>
+      <span class="blog-date">25th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/customizing-your-trading-experience-with-cubeplus-settings" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Customizing Your Trading Experience with CubePlus Settings</span>
+      <span class="blog-date">20th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/using-corporate-actions-peers-deals-and--news-effectively-on-cubeplus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Using Corporate Actions, Peers, Deals, and News Effectively on CubePlus</span>
+      <span class="blog-date">13th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/customizing-columns-in-cubeplus-for-clearer-position-and-order-tracking" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Customizing Columns in CubePlus for Clearer Position and Order Tracking</span>
+      <span class="blog-date">6th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/using-the-results-calendar-on-cubeplus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Using the Results Calendar on CubePlus</span>
+      <span class="blog-date">16th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/exploring-the-financials-dashboard-on-cubeplus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Exploring the Financials Dashboard on CubePlus</span>
+      <span class="blog-date">12th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-use-bulk-modify-on-cubeplus-to-manage-multiple-trades-efficiently" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Use Bulk Modify on CubePlus to Manage Multiple Trades Efficiently</span>
+      <span class="blog-date">9th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-use-bracket-orders-effectively-on-cubeplus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Use Bracket Orders Effectively on CubePlus</span>
+      <span class="blog-date">27th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/reading-the-market-through-seasonality-for-november-2025" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Reading the Market Through Seasonality for November 2025</span>
+      <span class="blog-date">12th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-use-active-by-volume-and-active-by-value-data-for-smarter-trading-decisions" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Use &#x27;Active by Volume&#x27; and &#x27;Active by Value&#x27; Data for Smarter Trading</span>
+      <span class="blog-date">31st Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/identifying-market-momentum-with-high-breakers-and-low-breakers" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Identifying Market Momentum with &#x27;High Breakers&#x27; and &#x27;Low Breakers&#x27; (co-authored)</span>
+      <span class="blog-date">18th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/delivery-volume-in-the-cash-market-a-key-indicator-for-investors" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Delivery Volume in the Cash Market: A Key Indicator for Investors (co-authored)</span>
+      <span class="blog-date">6th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/explore-open--high-and-open--low-stocks-with-ease-on-tradejini-cubeplus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Explore Open = High and Open = Low Stocks with Ease on Tradejini CubePlus</span>
+      <span class="blog-date">8th Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/the-cubeplus-guide-to-mutual-fund-investing" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">The CubePlus Guide to Mutual Fund Investing (co-authored)</span>
+      <span class="blog-date">6th Aug 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/intraday-trading-with-bracket-orders-on-tradejini-cubeplus" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Intraday Trading with Bracket Orders on Tradejini CubePlus</span>
+      <span class="blog-date">18th Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+<div class="cat-section anim" data-category="Business Decoded">
+  <div class="cat-header" style="--cat-color:#ef4444;--cat-bg:rgba(239,68,68,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#ef4444"></span><span class="cat-name">Business Decoded</span></div>
+    <span class="cat-count" style="background:rgba(239,68,68,0.15);color:#ef4444">6</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/how-the-india-eu-fta-could-reshape-indian-businesses" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How the India EU FTA Could Reshape Indian Businesses</span>
+      <span class="blog-date">29th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/can-nmdc-rerate-as-fy27-earnings-kick-in" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Can NMDC Re-Rate as FY27 Earnings Kick In?</span>
+      <span class="blog-date">27th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-varun-beverages-is-responding-to-campa-colas-comeback" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How Varun Beverages Is Responding to Campa Cola&#x27;s Comeback</span>
+      <span class="blog-date">13th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/green-energy-powerhouse--nlc-india-ltd" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Green Energy Powerhouse: NLC India Ltd.</span>
+      <span class="blog-date">6th Oct 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/why-dmart-trades-at-a-premium-and-what-it-Means" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Why DMart Trades at a Premium and What It Means</span>
+      <span class="blog-date">24th Jul 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/why-wealthy-indians-are-buying-second-homes-abroad" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Why Wealthy Indians Are Buying Second Homes Abroad?</span>
+      <span class="blog-date">5th May 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+<div class="cat-section anim" data-category="Personal Finance">
+  <div class="cat-header" style="--cat-color:#14b8a6;--cat-bg:rgba(20,184,166,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#14b8a6"></span><span class="cat-name">Personal Finance</span></div>
+    <span class="cat-count" style="background:rgba(20,184,166,0.15);color:#14b8a6">3</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/the-economics-of-leaving-a-highcost-city-vs-staying-what-the-math-misses" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">The Economics of Leaving a High-Cost City vs. Staying — What the Math Misses</span>
+      <span class="blog-date">27th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/9-smart-money-moves-for-2026" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">9 Smart Money Moves for 2026</span>
+      <span class="blog-date">9th Jan 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/the-hidden-cost-of-holding-cash-when-markets-rally" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">The Hidden Cost of Holding Cash When Markets Rally</span>
+      <span class="blog-date">4th Sep 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+<div class="cat-section anim" data-category="Mutual Funds">
+  <div class="cat-header" style="--cat-color:#22c55e;--cat-bg:rgba(34,197,94,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#22c55e"></span><span class="cat-name">Mutual Funds</span></div>
+    <span class="cat-count" style="background:rgba(34,197,94,0.15);color:#22c55e">12</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/converting-sip-savings-into-steady-monthly-income-through-an-swp" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Converting SIP Savings into Steady Monthly Income Through an SWP</span>
+      <span class="blog-date">19th Feb 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-start-sip-a-guide-on-mutual-funds-online--how-mutual-fund-payments-work" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Start SIP: A Guide on Mutual Funds Online &amp; How Mutual Fund Payments Work</span>
+      <span class="blog-date">27th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/sip-vs-lumpsum-which-one-is-better-in-2025" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">SIP vs Lumpsum: Which One is Better in 2025?</span>
+      <span class="blog-date">26th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/haircut-in-margin-trading-what-they-are-and-why-they-matter" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Haircut in Margin Trading: What They Are and Why They Matter</span>
+      <span class="blog-date">25th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/5-common-mistakes-traders-make-with-pledged-mutual-funds" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">5 Common Mistakes Traders Make With Pledged Mutual Funds</span>
+      <span class="blog-date">24th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-to-invest-500-monthly-in-mutual-funds" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How to Invest Rs.500 Monthly in Mutual Funds</span>
+      <span class="blog-date">21st Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/cash-vs-noncash-component-how-brokers-allocate-your-margin" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Cash vs Non-Cash Component: How Brokers Allocate Your Margin</span>
+      <span class="blog-date">18th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/heres-why-pledging-mutual-funds-makes-more-sense" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Here&#x27;s Why Pledging Mutual Funds Makes More Sense</span>
+      <span class="blog-date">16th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/understanding-cutoff-times-and-nav-allotment-for-mutual-fund-buyers" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Understanding Cut-Off Times and NAV Allotment for Mutual Fund Buyers</span>
+      <span class="blog-date">16th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/understanding-mutual-fund-returns" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Understanding Mutual Fund Returns</span>
+      <span class="blog-date">12th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/what-is-a-mutual-fund" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">What Is a Mutual Fund?</span>
+      <span class="blog-date">3rd Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/investing-in-precious-metals-through-etfs-in-india" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Investing in Precious Metals Through ETFs in India</span>
+      <span class="blog-date">2nd May 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+<div class="cat-section anim" data-category="Market Updates">
+  <div class="cat-header" style="--cat-color:#f97316;--cat-bg:rgba(249,115,22,0.15)">
+    <div class="cat-left"><span class="cat-dot" style="background:#f97316"></span><span class="cat-name">Market Updates</span></div>
+    <span class="cat-count" style="background:rgba(249,115,22,0.15);color:#f97316">8</span>
+  </div>
+<div class="blog-list">
+    <a href="https://www.tradejini.com/blogs/what-sebis-new-algo-trading-rules-mean-for-you" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">What SEBI&#x27;s New Algo Trading Rules Mean For You</span>
+      <span class="blog-date">1st Apr 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/a-financial-breakdown-of-the-16660-crore-rcb-sale" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">A Financial Breakdown of the Rs.16,660 Crore RCB Sale</span>
+      <span class="blog-date">25th Mar 2026</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/control-print-ltd--the-center-of-indias-coding-and-marking-ecosystem" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Control Print Ltd Stock: Latest Price Updates and Market Insights</span>
+      <span class="blog-date">16th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/why-traders-are-moving-to-dubai-from-india" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Why Traders Are Moving to Dubai From India</span>
+      <span class="blog-date">4th Dec 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/nse-to-launch-preopen-session-for-futures-contracts-from-december-8-2025" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">NSE to Launch Pre-Open Session for Futures Contracts from December 8, 2025</span>
+      <span class="blog-date">8th Nov 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/how-technology-is-redefining-the-future-of-gold-demand" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">How Technology is Redefining the Future of Gold Demand (co-authored)</span>
+      <span class="blog-date">11th Jun 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/40000-crore-catalyst-for-defence-selfreliance" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">Rs.40,000 Crore Catalyst for Defence Self-Reliance</span>
+      <span class="blog-date">24th May 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.tradejini.com/blogs/sebi-launches-mitra-to-help-investors-trace-inactive-mutual-fund-folios" target="_blank" rel="noopener" class="blog-item">
+      <span class="blog-title">SEBI Launches &#x27;MITRA&#x27; to Help Investors Trace Inactive Mutual Fund Folios</span>
+      <span class="blog-date">8th Apr 2025</span>
+      <span class="blog-arrow">&#8599;</span>
+    </a>
+</div></div>
+
+</div>
+
+<!-- VIDEOS -->
+<div id="videos" class="tab-content">
+  <div class="video-grid">
+    <a href="https://www.youtube.com/watch?v=BzxzxZxm3SY" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/BzxzxZxm3SY/mqdefault.jpg" alt="How to View Holdings Breakup on CubePlus | Explained" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">2:30</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">How to View Holdings Breakup on CubePlus | Explained</p>
+    <p class="video-month">May 2026</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=PreTrYGCIp8" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/PreTrYGCIp8/mqdefault.jpg" alt="Samhi Hotels Explained | Business Model, Growth, Risks &amp; Valuation" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">5:50</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Samhi Hotels Explained | Business Model, Growth, Risks &amp; Valuation</p>
+    <p class="video-month">Apr 2026</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=dKwIXruN6LQ" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/dKwIXruN6LQ/mqdefault.jpg" alt="How Algo Platforms Are Changing Trading in India | Inside Algo Trading: Part 1" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">7:08</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">How Algo Platforms Are Changing Trading in India | Inside Algo Trading: Part 1</p>
+    <p class="video-month">Mar 2026</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=_0yUvGIZMl8" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/_0yUvGIZMl8/mqdefault.jpg" alt="Valley of Disappointment" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">3:56</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Valley of Disappointment</p>
+    <p class="video-month">Feb 2026</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=L7i4qARYNIQ" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/L7i4qARYNIQ/mqdefault.jpg" alt="NxtOption Simulator" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">1:14</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">NxtOption Simulator</p>
+    <p class="video-month">Feb 2026</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=2jynyBvFkVo" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/2jynyBvFkVo/mqdefault.jpg" alt="Peter Lynch Playbook" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">5:52</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Peter Lynch Playbook</p>
+    <p class="video-month">Jan 2026</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=16HEDJrIsiA" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/16HEDJrIsiA/mqdefault.jpg" alt="NxtOption is Your &#x27;What If&#x27;" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">1:15</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">NxtOption is Your &#x27;What If&#x27;</p>
+    <p class="video-month">Jan 2026</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=oO06loUa4gA" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/oO06loUa4gA/mqdefault.jpg" alt="Christmas Cake" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">1:43</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Christmas Cake</p>
+    <p class="video-month">Dec 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=QzR8nVN4vHY" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/QzR8nVN4vHY/mqdefault.jpg" alt="NxtOption Market Movers EXPLAINED" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">4:11</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">NxtOption Market Movers EXPLAINED</p>
+    <p class="video-month">Dec 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=4H7juu9P2wI" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/4H7juu9P2wI/mqdefault.jpg" alt="OI Spurts EXPLAINED in NXTOption" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">5:21</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">OI Spurts EXPLAINED in NXTOption</p>
+    <p class="video-month">Dec 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=4uM_rdIRlJw" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/4uM_rdIRlJw/mqdefault.jpg" alt="Do This BEFORE Your Futures Roll Over | NXTOption Rollover Analysis Explained" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">3:36</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Do This BEFORE Your Futures Roll Over | NXTOption Rollover Analysis Explained</p>
+    <p class="video-month">Dec 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=KmLMiWZ-QLY" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/KmLMiWZ-QLY/mqdefault.jpg" alt="This INSANELY Fast Tool Makes Option Scalping Easy" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">8:26</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">This INSANELY Fast Tool Makes Option Scalping Easy</p>
+    <p class="video-month">Nov 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=MNz6jqk-HME" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/MNz6jqk-HME/mqdefault.jpg" alt="The Indian Company Building Planes for Boeing &amp; Airbus | Tata Advanced Systems Story" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">1:01</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">The Indian Company Building Planes for Boeing &amp; Airbus | Tata Advanced Systems Story</p>
+    <p class="video-month">Nov 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=-W7Bj8fSU5I" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/-W7Bj8fSU5I/mqdefault.jpg" alt="Decoding India&#x27;s Construction Boom | FREE Webinar | Tradejini" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">59:26</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Decoding India&#x27;s Construction Boom | FREE Webinar | Tradejini</p>
+    <p class="video-month">Nov 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=rmfmK-P5sU4" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/rmfmK-P5sU4/mqdefault.jpg" alt="India&#x27;s Construction Boom Explained | Webinar with Praveen George (Promo)" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">0:18</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">India&#x27;s Construction Boom Explained | Webinar with Praveen George (Promo)</p>
+    <p class="video-month">Nov 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=vGEuh_3NshA" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/vGEuh_3NshA/mqdefault.jpg" alt="See the FUTURE of Your Options Trade | &#x27;What If&#x27; Feature on NXToption" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">5:45</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">See the FUTURE of Your Options Trade | &#x27;What If&#x27; Feature on NXToption</p>
+    <p class="video-month">Nov 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=IqZKcMiWSlE" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/IqZKcMiWSlE/mqdefault.jpg" alt="Predict Option Prices BEFORE the Market Moves | &#x27;What If&#x27; Feature Explained" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">5:45</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Predict Option Prices BEFORE the Market Moves | &#x27;What If&#x27; Feature Explained</p>
+    <p class="video-month">Nov 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=6We0FSgAWZg" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/6We0FSgAWZg/mqdefault.jpg" alt="How to Build Options Strategies with NXToption Strategy Builder" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">7:35</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">How to Build Options Strategies with NXToption Strategy Builder</p>
+    <p class="video-month">Oct 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=XCME1TqJbq4" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/XCME1TqJbq4/mqdefault.jpg" alt="How to Build Options Strategies with NXToption Strategy Builder (Tutorial)" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">7:35</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">How to Build Options Strategies with NXToption Strategy Builder (Tutorial)</p>
+    <p class="video-month">Oct 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=PI2UhKqNHos" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/PI2UhKqNHos/mqdefault.jpg" alt="BRAHMOS Missile Powering Indian Company | Data Patterns Full Breakdown" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">5:29</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">BRAHMOS Missile Powering Indian Company | Data Patterns Full Breakdown</p>
+    <p class="video-month">Oct 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=rdqRZlf0oss" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/rdqRZlf0oss/mqdefault.jpg" alt="Master the Market with Strategy Watch on NxtOption!" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">11:01</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Master the Market with Strategy Watch on NxtOption!</p>
+    <p class="video-month">Sep 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=xTCLj78YhWw" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/xTCLj78YhWw/mqdefault.jpg" alt="Take Control of Your Trades with Strategy Builder on NxtOption!" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">9:23</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Take Control of Your Trades with Strategy Builder on NxtOption!</p>
+    <p class="video-month">Sep 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=Zrb3oDGSOHs" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/Zrb3oDGSOHs/mqdefault.jpg" alt="Market Direction Made Easy with NxtOption&#x27;s Easy Options!" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">10:43</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Market Direction Made Easy with NxtOption&#x27;s Easy Options!</p>
+    <p class="video-month">Sep 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=LlEUX4b9hVE" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/LlEUX4b9hVE/mqdefault.jpg" alt="Decode Market Moves with Implied Volatility on NxtOption" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">5:35</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Decode Market Moves with Implied Volatility on NxtOption</p>
+    <p class="video-month">Sep 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=NrqviEBM2o0" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/NrqviEBM2o0/mqdefault.jpg" alt="Cocoa Prices Are Dropping — Who&#x27;s Benefiting from This?" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">1:39</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Cocoa Prices Are Dropping — Who&#x27;s Benefiting from This?</p>
+    <p class="video-month">Sep 2025</p>
+  </div>
+</a>
+<a href="https://www.youtube.com/watch?v=QNwRLLAwKdQ" target="_blank" rel="noopener" class="video-card anim">
+  <div class="video-thumb">
+    <img src="https://img.youtube.com/vi/QNwRLLAwKdQ/mqdefault.jpg" alt="Gravita India: India&#x27;s Recycling Giant Set to Explode? | Stock Analysis 2025" loading="lazy" onerror="this.style.display='none'">
+    <div class="video-play"><svg viewBox="0 0 24 24" fill="white" width="32" height="32"><polygon points="8,5 19,12 8,19"/></svg></div>
+    <span class="video-dur">4:10</span>
+  </div>
+  <div class="video-info">
+    <p class="video-title">Gravita India: India&#x27;s Recycling Giant Set to Explode? | Stock Analysis 2025</p>
+    <p class="video-month">Jul 2025</p>
+  </div>
+</a>
+
+  </div>
+</div>
+
+<footer>
+  Praveen George &mdash; Financial Research &amp; Content &mdash; Tradejini &mdash; 2025&ndash;2026
+</footer>
+
+<script>
+// Tab switching
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (btn) btn.classList.add('active');
+  // Re-trigger scroll animations for newly visible tab
+  requestAnimationFrame(() => observer.disconnect() || initObserver());
+}
+
+// Category filtering
+document.querySelectorAll('.pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    const cat = pill.dataset.cat;
+    document.querySelectorAll('.cat-section').forEach(sec => {
+      if (cat === 'all' || sec.dataset.category === cat) {
+        sec.classList.remove('hidden');
+      } else {
+        sec.classList.add('hidden');
+      }
+    });
+  });
+});
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+function initObserver() {
+  document.querySelectorAll('.anim:not(.visible)').forEach(el => observer.observe(el));
+}
+initObserver();
+</script>
+</body>
+</html>
