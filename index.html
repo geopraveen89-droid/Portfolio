@@ -130,8 +130,11 @@ h1 em{display:block;font-style:italic;font-weight:300;color:#7FBFA1}
 
 /* ---------- hub (blogs / films entry) ---------- */
 .hub{padding:46px 0 8px}
-.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.hgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.hgrid{grid-template-columns:1fr}}
+.hig{position:absolute;inset:0;background:linear-gradient(150deg,#123E2C 0%,#0E5C3F 60%,#07291D 130%)}
+.higlyph{position:absolute;right:-16px;bottom:-20px;color:rgba(159,201,181,.16);pointer-events:none}
 .hcard{position:relative;display:block;border-radius:6px;overflow:hidden;
   aspect-ratio:16/9;border:1px solid var(--rule);cursor:pointer;transition:.25s;background:var(--deeper)}
 .hcard:hover{transform:translateY(-4px);border-color:var(--green);
@@ -277,7 +280,7 @@ footer .sub{font-family:var(--mono);font-size:12.5px;color:var(--mist);margin-to
 "jobTitle":"Capital Markets Research Analyst",
 "worksFor":{"@type":"Organization","name":"Tradejini Financial Services"},
 "url":"https://geopraveen89-droid.github.io/Portfolio/",
-"email":"mailto:geopraveen89@gmail.com",
+"email":"mailto:georgepraveenofficial@gmail.com",
 "address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},
 "sameAs":["https://www.linkedin.com/in/praveen-george-capital-markets","https://www.instagram.com/praveenonmarkets"],
 "hasCredential":{"@type":"EducationalOccupationalCredential","name":"NISM Series XV Research Analyst Certification"}}
@@ -314,7 +317,7 @@ footer .sub{font-family:var(--mono);font-size:12.5px;color:var(--mist);margin-to
   <div class="hgrid">
     <a class="hcard io" data-tab="blogs" href="#register" aria-label="Read the research register">
       <img class="himg" loading="lazy" referrerpolicy="no-referrer" alt=""
-        src="https://firebasestorage.googleapis.com/v0/b/tradejini-42641.firebasestorage.app/o/Tradejini-Blogs-Media%2FMutual%20Funds%2FEvery%20Mutual%20Fund%20Term%20You%20Keep%20Skipping%20Over%2FMutual%20Fund%20Terms%20Explained%20Blog%20Thumbnail.webp?alt=media&amp;token=f155d355-c6ac-49ed-bac4-469ee8f15ced">
+        src="https://firebasestorage.googleapis.com/v0/b/tradejini-42641.firebasestorage.app/o/Tradejini-Blogs-Media%2FFundamental%20Analysis%2FSamhi%20Hotels%20Limited%20-%20A%20Fundamental%20Analysis%20of%20the%20Turnaround%20Case%2FSamhi%20Hotels%20Limited%20Blog%20Thumbnail.webp?alt=media&amp;token=3707b0d6-7d4d-4671-b234-a015aeca4651">
       <div class="hscrim"></div>
       <div class="hbody">
         <span class="htag">Research Register</span>
@@ -324,12 +327,26 @@ footer .sub{font-family:var(--mono);font-size:12.5px;color:var(--mist);margin-to
     </a>
     <a class="hcard io" data-tab="videos" href="#register" aria-label="Watch the films">
       <img class="himg" loading="lazy" referrerpolicy="no-referrer" alt=""
-        src="https://i.ytimg.com/vi/htmJvHiiC68/hqdefault.jpg">
+        src="https://i.ytimg.com/vi/PreTrYGCIp8/hqdefault.jpg">
       <div class="hscrim"></div>
       <div class="hbody">
         <span class="htag">Films &amp; Podcasts</span>
         <div class="hh">Watch the Films</div>
         <div class="hcount">Platform explainers, stock breakdowns &amp; market wraps <span class="hgo">&#8599;</span></div>
+      </div>
+    </a>
+    <a class="hcard io" href="https://www.instagram.com/praveenonmarkets" target="_blank" rel="noopener" aria-label="Follow on Instagram">
+      <div class="hig"></div>
+      <svg class="higlyph" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="6"/>
+        <circle cx="12" cy="12" r="4.3"/>
+        <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/>
+      </svg>
+      <div class="hscrim"></div>
+      <div class="hbody">
+        <span class="htag">Instagram</span>
+        <div class="hh">@praveenonmarkets</div>
+        <div class="hcount">Reels, market wraps &amp; behind the scenes <span class="hgo">&#8599;</span></div>
       </div>
     </a>
   </div>
@@ -378,7 +395,7 @@ footer .sub{font-family:var(--mono);font-size:12.5px;color:var(--mist);margin-to
   <div>
     <h3>Let&rsquo;s talk <em>research.</em></h3>
     <p class="sub">Open to capital markets research &amp; financial content roles.</p>
-    <a class="mailbtn" href="mailto:geopraveen89@gmail.com">geopraveen89@gmail.com <s>→</s></a>
+    <a class="mailbtn" href="mailto:georgepraveenofficial@gmail.com">georgepraveenofficial@gmail.com <s>→</s></a>
   </div>
   <div class="fc">
     <a href="tel:+917338428777">+91 73384 28777</a>
