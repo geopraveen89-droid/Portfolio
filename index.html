@@ -1,1 +1,490 @@
-<![CDATA[PLACEHOLDER]]>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Praveen George | Capital Markets Research Portfolio</title>
+<meta name="description" content="Praveen George, Capital Markets Research Analyst and financial content creator. A searchable register of published equity research: company analyses, sector studies, derivatives strategies and fintech education across Indian markets. NISM Series XV certified.">
+<meta property="og:title" content="Praveen George | Capital Markets Research">
+<meta property="og:description" content="A searchable register of published equity research: company analyses, sector studies, derivatives and fintech education. NISM Series XV.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://geopraveen89-droid.github.io/Portfolio/">
+<meta property="og:site_name" content="Praveen George Research Register">
+<meta property="og:image" content="https://geopraveen89-droid.github.io/Portfolio/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Praveen George, Capital Markets Research, NISM Series XV">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Praveen George | Capital Markets Research">
+<meta name="twitter:description" content="A searchable register of published equity research: company analyses, sector studies, derivatives and fintech education. NISM Series XV.">
+<meta name="twitter:image" content="https://geopraveen89-droid.github.io/Portfolio/og.jpg">
+<link rel="canonical" href="https://geopraveen89-droid.github.io/Portfolio/">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="8" fill="%230A3B29"/><text x="32" y="44" font-family="Georgia,serif" font-size="34" fill="%23F5F3EA" text-anchor="middle">PG</text></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#13201A; --paper:#F5F3EA; --card:#FCFBF6; --rule:#DBD5C4; --rule2:#EAE5D6;
+  --dim:#5A665F; --faint:#9AA49C;
+  --green:#0E5C3F; --deep:#0A3B29; --deeper:#07291D; --bright:#179963; --mist:#9FC9B5;
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block}
+.mono{font-family:var(--mono)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+::selection{background:var(--bright);color:#fff}
+:focus-visible{outline:2px solid var(--bright);outline-offset:2px}
+
+/* ---------- topbar ---------- */
+.top{position:sticky;top:0;z-index:50;background:rgba(245,243,234,.96);
+  border-bottom:1px solid var(--rule)}
+@supports(backdrop-filter:blur(8px)){.top{background:rgba(245,243,234,.85);backdrop-filter:blur(10px)}}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:56px}
+.brand{font-family:var(--serif);font-weight:600;font-size:17px;white-space:nowrap;flex:none}
+.brand b{color:var(--green);font-weight:600}
+.nav{display:flex;gap:22px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--dim);white-space:nowrap}
+.nav a{padding:4px 0}
+.nav a:hover{color:var(--green)}
+@media(max-width:600px){
+  .nav{gap:15px;font-size:10.5px}
+  .nav a[data-hide]{display:none}
+}
+
+/* ---------- masthead ---------- */
+.mast{background:var(--deep);color:var(--paper);position:relative;overflow:hidden}
+.mast::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(115% 80% at 88% -10%,rgba(23,153,99,.32),transparent 58%),
+             radial-gradient(70% 55% at -6% 112%,rgba(23,153,99,.15),transparent 55%)}
+.mast::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;
+  background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><filter id="n"><feTurbulence baseFrequency="0.9" numOctaves="2"/></filter><rect width="120" height="120" filter="url(%23n)" opacity="0.6"/></svg>')}
+/* ticker tape, signature */
+.tape{position:relative;z-index:2;overflow:hidden;border-bottom:1px solid rgba(159,201,181,.22);
+  background:rgba(7,41,29,.55)}
+.tape-in{display:flex;width:max-content;white-space:nowrap;padding:10px 0;
+  font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--mist);
+  animation:tape 46s linear infinite}
+.tape-in span{padding:0 22px;display:inline-flex;align-items:center;gap:8px}
+.tape-in i{font-style:normal;color:var(--bright)}
+@keyframes tape{to{transform:translateX(-50%)}}
+.mast .wrap{position:relative;z-index:2;padding:clamp(56px,9vw,86px) 24px clamp(46px,7vw,62px)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--mist)}
+.kicker{display:inline-flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:26px;height:1px;background:var(--bright)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,9vw,108px);
+  line-height:.97;letter-spacing:-.016em;margin-top:20px}
+h1 em{display:block;font-style:italic;font-weight:300;color:#7FBFA1}
+.mandate{max-width:640px;margin-top:26px;font-size:clamp(16px,2.2vw,17.5px);line-height:1.64;color:#D8E6DE}
+.mandate b{color:#fff;font-weight:500}
+.issue{margin-top:34px;padding-top:20px;border-top:1px solid rgba(159,201,181,.3);
+  display:flex;flex-wrap:wrap;gap:9px 24px;font-family:var(--mono);
+  font-size:12.5px;letter-spacing:.05em;color:#BFD8CC}
+.issue b{color:#fff;font-weight:500}
+.issue i{font-style:normal;color:#4E8C72}
+.ctas{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;
+  padding:14px 22px;border-radius:2px;cursor:pointer;border:1px solid transparent;
+  display:inline-flex;align-items:center;gap:10px;transition:.18s;background:transparent}
+.btn s{display:inline-block;text-decoration:none;transition:transform .18s}
+.btn:hover s{transform:translateX(4px)}
+.btn-fill{background:var(--bright);color:#fff}
+.btn-fill:hover{background:#1bae71;transform:translateY(-1px)}
+.btn-line{color:var(--paper);border-color:rgba(159,201,181,.5)}
+.btn-line:hover{border-color:var(--mist);background:rgba(159,201,181,.12)}
+@media(max-width:520px){.btn{flex:1;justify-content:center;min-width:148px}}
+
+/* ---------- featured ---------- */
+.feat{padding:54px 0 10px}
+.sect-k{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+.sect-k .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--green)}
+.sect-k .ln{flex:1;height:1px;background:var(--rule)}
+.sect-k .vol{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.1em}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px}
+.fcard{background:var(--card);border:1px solid var(--rule);border-radius:3px;
+  padding:22px 20px 18px;display:flex;flex-direction:column;gap:12px;
+  position:relative;transition:.22s;overflow:hidden}
+.fcard::before{content:attr(data-n);position:absolute;right:14px;top:8px;
+  font-family:var(--serif);font-size:64px;line-height:1;color:var(--green);opacity:.07;font-weight:600}
+.fcard::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--green);
+  transform:scaleX(0);transform-origin:left;transition:.28s}
+.fcard:hover{transform:translateY(-4px);border-color:var(--green);
+  box-shadow:0 22px 38px -20px rgba(19,32,26,.4)}
+.fcard:hover::after{transform:scaleX(1)}
+.ftag{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--green)}
+.ftitle{font-family:var(--serif);font-weight:500;font-size:19.5px;line-height:1.3;flex:1}
+.fmeta{display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.fmeta s{text-decoration:none;color:var(--faint);transition:.18s}
+.fcard:hover .fmeta s{color:var(--green);transform:translate(2px,-2px)}
+
+/* ---------- hub (blogs / films entry) ---------- */
+.hub{padding:46px 0 8px}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:680px){.hgrid{grid-template-columns:1fr}}
+.hcard{position:relative;display:block;border-radius:6px;overflow:hidden;
+  aspect-ratio:16/9;border:1px solid var(--rule);cursor:pointer;transition:.25s;background:var(--deeper)}
+.hcard:hover{transform:translateY(-4px);border-color:var(--green);
+  box-shadow:0 26px 46px -22px rgba(19,32,26,.5)}
+.himg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform .5s ease}
+.hcard:hover .himg{transform:scale(1.045)}
+.hscrim{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(7,41,29,.1) 0%,rgba(7,41,29,.58) 58%,rgba(6,22,16,.94) 100%)}
+.hbody{position:absolute;left:24px;right:24px;bottom:22px;color:#fff}
+.htag{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mist)}
+.hh{font-family:var(--serif);font-weight:500;font-size:clamp(23px,3.2vw,31px);margin-top:8px;line-height:1.1}
+.hcount{font-family:var(--mono);font-size:12px;color:#D8E6DE;margin-top:9px;
+  display:flex;align-items:center;gap:10px;max-width:90%}
+.hgo{flex:none;display:inline-flex;width:32px;height:32px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.5);align-items:center;justify-content:center;transition:.2s}
+.hcard:hover .hgo{background:var(--bright);border-color:var(--bright)}
+/* ---------- toolbar ---------- */
+.bar{position:sticky;top:56px;z-index:40;background:var(--paper);
+  border-bottom:1px solid var(--rule);padding:14px 0 12px}
+.bar .wrap{display:flex;flex-direction:column;gap:12px}
+.seg{display:inline-flex;width:max-content;border:1px solid var(--ink);border-radius:2px;
+  overflow:hidden;font-family:var(--mono);font-size:12.5px}
+.seg button{background:none;border:0;cursor:pointer;padding:10px 22px;color:var(--ink);
+  letter-spacing:.06em;text-transform:uppercase;transition:.15s}
+.seg button.on{background:var(--ink);color:var(--paper)}
+.tools{display:flex;gap:14px;align-items:center}
+.search{flex:1;display:flex;align-items:center;gap:10px;border:1px solid var(--rule);
+  border-radius:2px;background:var(--card);padding:0 13px;transition:.18s}
+.search:focus-within{border-color:var(--green);box-shadow:0 0 0 3px rgba(14,92,63,.1)}
+.search svg{flex:none;stroke:var(--faint)}
+.search input{flex:1;border:0;outline:0;background:none;padding:11px 0;
+  font-family:var(--mono);font-size:13.5px;color:var(--ink);min-width:0}
+.search input::placeholder{color:var(--faint)}
+#live{font-family:var(--mono);font-size:11.5px;color:var(--dim);white-space:nowrap}
+.chips{display:flex;gap:7px;overflow-x:auto;padding-bottom:3px;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;font-family:var(--mono);font-size:11.5px;padding:7px 13px;
+  border:1px solid var(--rule);border-radius:999px;cursor:pointer;color:var(--dim);
+  background:var(--card);transition:.14s;white-space:nowrap}
+.chip b{opacity:.55;margin-left:5px;font-weight:400}
+.chip:hover{border-color:var(--green);color:var(--green)}
+.chip.on{background:var(--green);border-color:var(--green);color:#fff}
+.chip.on b{opacity:.85}
+
+/* ---------- register ---------- */
+main{padding:44px 0 90px;min-height:55vh}
+.sec{margin-bottom:52px;scroll-margin-top:150px}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--ink);
+  padding-bottom:10px;margin-bottom:4px}
+.sec-no{font-family:var(--mono);font-size:12.5px;color:var(--green);font-weight:500}
+.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(21px,3vw,24px);letter-spacing:-.01em;flex:1}
+.sec-ct{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.row{display:flex;align-items:baseline;gap:18px;padding:14px 8px 13px;
+  border-bottom:1px solid var(--rule2);position:relative;transition:.16s}
+.row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--green);transition:width .18s}
+.row:hover{background:var(--card);padding-left:18px}
+.row:hover::before{width:3px}
+.rdate{font-family:var(--mono);font-size:12px;color:var(--dim);width:112px;flex:none}
+.rtitle{flex:1;font-size:16px;line-height:1.45}
+.row:hover .rtitle{color:var(--green)}
+.rgo{font-family:var(--mono);color:#C5BEAB;flex:none;transition:.16px}
+.row:hover .rgo{color:var(--green);transform:translate(2px,-2px)}
+@media(max-width:620px){
+  .row{flex-wrap:wrap;gap:5px 12px;padding:14px 6px}
+  .rdate{order:2;width:auto;font-size:11px}
+  .rtitle{order:1;flex-basis:calc(100% - 30px);font-size:15.5px}
+  .rgo{order:1;margin-left:auto}
+}
+
+/* ---------- films: poster cards ---------- */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:18px}
+.vcard{position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--rule);
+  aspect-ratio:16/10;transition:.22s;background:var(--deeper)}
+.vcard:hover{transform:translateY(-4px);border-color:var(--green);
+  box-shadow:0 22px 40px -20px rgba(19,32,26,.55)}
+.vp{position:absolute;inset:0}
+.vp-a{background:linear-gradient(135deg,#0A3B29 0%,#13201A 100%)}
+.vp-b{background:linear-gradient(140deg,#0E5C3F 0%,#08291D 100%)}
+.vp-c{background:linear-gradient(150deg,#123E2C 0%,#0E5C3F 120%)}
+.vp-d{background:linear-gradient(135deg,#13201A 0%,#0E5C3F 130%)}
+.vp::after{content:"▶";position:absolute;right:-14px;bottom:-26px;
+  font-size:110px;line-height:1;color:rgba(159,201,181,.08)}
+.vimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity .5s}
+.vimg.ok{opacity:1}
+.vscrim{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,22,16,.92) 0%,rgba(6,22,16,.42) 42%,rgba(6,22,16,.12) 70%,rgba(6,22,16,.25) 100%)}
+.vtop{position:absolute;top:10px;left:12px;right:10px;display:flex;
+  justify-content:space-between;align-items:center;gap:8px}
+.vmonth{font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--mist)}
+.vdur{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:#fff;
+  background:rgba(7,41,29,.78);border:1px solid rgba(159,201,181,.35);
+  padding:3px 8px;border-radius:2px}
+.vtitle{position:absolute;left:14px;right:14px;bottom:13px;
+  font-family:var(--serif);font-weight:500;font-size:17.5px;line-height:1.3;color:#F7F5EC;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.vplay{position:absolute;inset:0;display:grid;place-items:center}
+.vplay span{width:46px;height:46px;border-radius:50%;background:rgba(7,41,29,.66);
+  border:1px solid rgba(159,201,181,.4);display:grid;place-items:center;
+  transition:.2s;backdrop-filter:blur(2px)}
+.vcard:hover .vplay span{background:var(--bright);border-color:var(--bright);transform:scale(1.12)}
+.vplay svg{margin-left:2px}
+.empty{text-align:center;padding:70px 0;color:var(--dim);font-family:var(--mono);font-size:13.5px}
+
+/* ---------- footer ---------- */
+footer{background:var(--deep);color:var(--paper);padding:58px 0 38px;margin-top:24px;
+  position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(90% 100% at 100% 0%,rgba(23,153,99,.18),transparent 55%)}
+footer .wrap{position:relative;display:flex;flex-wrap:wrap;gap:30px;
+  justify-content:space-between;align-items:flex-end}
+footer h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,4vw,34px)}
+footer h3 em{font-style:italic;color:#7FBFA1}
+footer .sub{font-family:var(--mono);font-size:12.5px;color:var(--mist);margin-top:10px}
+.mailbtn{display:inline-flex;align-items:center;gap:10px;margin-top:22px;
+  background:var(--bright);color:#fff;font-family:var(--mono);font-size:12.5px;
+  letter-spacing:.07em;text-transform:uppercase;padding:14px 22px;border-radius:2px;transition:.18s}
+.mailbtn:hover{background:#1bae71;transform:translateY(-1px)}
+.fc{display:flex;flex-direction:column;gap:7px;font-family:var(--mono);font-size:13px;color:#C9DCD2}
+.fc a:hover{color:#fff;text-decoration:underline}
+.fnote{width:100%;margin-top:30px;padding-top:16px;border-top:1px solid rgba(159,201,181,.25);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:#7FA593}
+.fdisc{width:100%;margin-top:14px;font-size:11.5px;line-height:1.6;color:#6E8F80;max-width:860px}
+
+/* ---------- motion ---------- */
+.rise{opacity:0;transform:translateY(16px);animation:up .7s cubic-bezier(.2,.7,.3,1) forwards}
+.rise:nth-child(2){animation-delay:.07s}.rise:nth-child(3){animation-delay:.14s}
+.rise:nth-child(4){animation-delay:.21s}.rise:nth-child(5){animation-delay:.28s}
+@keyframes up{to{opacity:1;transform:none}}
+.io{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
+.io.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto}
+  .rise,.io{opacity:1;transform:none}
+  .tape-in{animation:none!important}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Praveen George",
+"jobTitle":"Capital Markets Research Analyst",
+"worksFor":{"@type":"Organization","name":"Tradejini Financial Services"},
+"url":"https://geopraveen89-droid.github.io/Portfolio/",
+"email":"mailto:geopraveen89@gmail.com",
+"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},
+"sameAs":["https://www.linkedin.com/in/praveen-george-capital-markets","https://www.instagram.com/praveenonmarkets"],
+"hasCredential":{"@type":"EducationalOccupationalCredential","name":"NISM Series XV Research Analyst Certification"}}
+</script>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <a class="brand" href="#">Praveen <b>George</b></a>
+  <nav class="nav">
+    <a href="#selected" data-hide>Selected</a>
+    <a href="#register" data-tab="blogs">Research</a>
+    <a href="#register" data-tab="videos">Films</a>
+    <a href="https://www.instagram.com/praveenonmarkets" target="_blank" rel="noopener" data-hide>Instagram</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div></div>
+
+<header class="mast">
+  <div class="tape" aria-hidden="true"><div class="tape-in" id="tape"></div></div>
+  <div class="wrap">
+    <div class="eyebrow kicker rise">Capital Markets · Equity Research · Financial Media</div>
+    <h1 class="rise">Praveen George<em>research, written to be read.</em></h1>
+    <p class="mandate rise">Capital markets research analyst at <b>Tradejini Financial Services</b>. I turn dense company filings, sector cycles and derivatives mechanics into <b>research the retail investor actually finishes</b>: across notes, sector studies and film.</p>
+    <div class="issue rise" id="issue"></div>
+    <div class="ctas rise">
+      <button class="btn btn-fill" data-tab="blogs">Read the research <s>→</s></button>
+      <button class="btn btn-line" data-tab="videos">Watch the films <s>→</s></button>
+    </div>
+  </div>
+</header>
+
+<section class="hub wrap">
+  <div class="hgrid">
+    <a class="hcard io" data-tab="blogs" href="#register" aria-label="Read the research register">
+      <img class="himg" loading="lazy" referrerpolicy="no-referrer" alt=""
+        src="https://firebasestorage.googleapis.com/v0/b/tradejini-42641.firebasestorage.app/o/Tradejini-Blogs-Media%2FMutual%20Funds%2FEvery%20Mutual%20Fund%20Term%20You%20Keep%20Skipping%20Over%2FMutual%20Fund%20Terms%20Explained%20Blog%20Thumbnail.webp?alt=media&amp;token=f155d355-c6ac-49ed-bac4-469ee8f15ced">
+      <div class="hscrim"></div>
+      <div class="hbody">
+        <span class="htag">Research Register</span>
+        <div class="hh">Read the Blogs</div>
+        <div class="hcount">Company analyses, sector studies &amp; platform guides <span class="hgo">&#8599;</span></div>
+      </div>
+    </a>
+    <a class="hcard io" data-tab="videos" href="#register" aria-label="Watch the films">
+      <img class="himg" loading="lazy" referrerpolicy="no-referrer" alt=""
+        src="https://i.ytimg.com/vi/htmJvHiiC68/hqdefault.jpg">
+      <div class="hscrim"></div>
+      <div class="hbody">
+        <span class="htag">Films &amp; Podcasts</span>
+        <div class="hh">Watch the Films</div>
+        <div class="hcount">Platform explainers, stock breakdowns &amp; market wraps <span class="hgo">&#8599;</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="feat wrap" id="selected">
+  <div class="sect-k"><span class="k">Selected Work</span><span class="ln"></span><span class="vol">VOL. 2025-26</span></div>
+  <div class="fgrid">
+    <a class="fcard io" data-n="01" href="https://www.tradejini.com/blogs/navigating--indias-wastewater-treatment-mega-cycle" target="_blank" rel="noopener">
+      <span class="ftag">Sector Study</span>
+      <span class="ftitle">Navigating India&rsquo;s Wastewater Treatment Mega Cycle</span>
+      <span class="fmeta">14-min read &middot; Apr 2026 <s>&#8599;</s></span></a>
+    <a class="fcard io" data-n="02" href="https://www.tradejini.com/blogs/samhi-hotels-limited-a-fundamental-analysis-of-the-turnaround-case" target="_blank" rel="noopener">
+      <span class="ftag">Company Analysis</span>
+      <span class="ftitle">Samhi Hotels Limited - A Fundamental Analysis of the Turnaround Case</span>
+      <span class="fmeta">23-min read &middot; Apr 2026 <s>&#8599;</s></span></a>
+    <a class="fcard io" data-n="03" href="https://youtu.be/bhazCKdQws4" target="_blank" rel="noopener">
+      <span class="ftag">Podcast &#9654;</span>
+      <span class="ftitle">The Ultimate Stock Market Debate</span>
+      <span class="fmeta">Film &middot; Aug 2026 <s>&#8599;</s></span></a>
+    <a class="fcard io" data-n="04" href="https://www.tradejini.com/blogs/performance-review-of-the-top-hospital-stocks" target="_blank" rel="noopener">
+      <span class="ftag">Business Decoded</span>
+      <span class="ftitle">Performance Review of The Top Hospital Stocks</span>
+      <span class="fmeta">7-min read &middot; Aug 2026 <s>&#8599;</s></span></a>
+  </div>
+</section>
+
+<div class="bar" id="register"><div class="wrap">
+  <div class="seg" role="tablist">
+    <button id="tb" class="on" role="tab">Research Notes</button>
+    <button id="tv" role="tab">Films</button>
+  </div>
+  <div class="tools">
+    <label class="search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="search" autocomplete="off" placeholder="Search the register&hellip;">
+    </label>
+    <span id="live"></span>
+  </div>
+  <div class="chips" id="chips"></div>
+</div></div>
+
+<main class="wrap"><div id="view"></div></main>
+
+<footer id="contact"><div class="wrap">
+  <div>
+    <h3>Let&rsquo;s talk <em>research.</em></h3>
+    <p class="sub">Open to capital markets research &amp; financial content roles.</p>
+    <a class="mailbtn" href="mailto:geopraveen89@gmail.com">geopraveen89@gmail.com <s>→</s></a>
+  </div>
+  <div class="fc">
+    <a href="tel:+917338428777">+91 73384 28777</a>
+    <a href="https://www.linkedin.com/in/praveen-george-capital-markets" target="_blank" rel="noopener">linkedin.com/in/praveen-george-capital-markets</a>
+    <a href="https://www.instagram.com/praveenonmarkets" target="_blank" rel="noopener">instagram.com/praveenonmarkets</a>
+    <span>Bengaluru, India</span>
+  </div>
+  <div class="fnote" id="fnote"></div>
+  <p class="fdisc">Research and content in this register were published in a professional capacity for Tradejini Financial Services. All material is informational and educational in nature and is not investment advice, a recommendation, or a solicitation to transact in any security. Praveen George holds the NISM Series XV (Research Analyst) certification.</p>
+</div></footer>
+
+<script id="db" type="application/json">{"blogs": [{"title": "Performance Review of The Top Hospital Stocks","url": "https://www.tradejini.com/blogs/performance-review-of-the-top-hospital-stocks","cat": "Business Decoded","date": "12th Aug 2026","read": "7 min"},{"title": "Every Mutual Fund Term You Keep Skipping Over","url": "https://www.tradejini.com/blogs/every-mutual-fund-term-you-keep-skipping-over","cat": "Mutual Funds","date": "23rd Jul 2026","read": "8 min"},{"title": "Trading the Iron Fly Strategy Using NxtOption","url": "https://www.tradejini.com/blogs/trading-the-iron-fly-strategy-using-nxtoption","cat": "NxtOption","date": "14th Jul 2026","read": "5 min"},{"title": "Grow Your Retirement Corpus With EPF and VPF","url": "https://www.tradejini.com/blogs/grow-your-retirement-corpus-with-epf-and-vpf","cat": "Personal Finance","date": "12th Jul 2026","read": "5 min"},{"title": "Why Your Stop-Loss Doesn't Work During Gap Opens","url": "https://www.tradejini.com/blogs/why-your-stoploss-doesnt-work-during-gap-opens","cat": "Stock Market Basics","date": "8th Jul 2026","read": "13 min"},{"title": "The True Cost of Buying a Used Car on Loan","url": "https://www.tradejini.com/blogs/the-true-cost-of-buying-a-used-car-on-loan","cat": "Personal Finance","date": "6th Jul 2026","read": "7 min"},{"title": "Trading Straddles as a Trend-Following Tool on Nifty (co-authored)","url": "https://www.tradejini.com/blogs/trading-straddles-as-a-trendfollowing-tool-on-nifty","cat": "Technical Analysis","date": "6th Jul 2026","read": "6 min"},{"title": "Swara Baby Products Files for Rs 1,000 Crore IPO","url": "https://www.tradejini.com/blogs/swara-baby-products-files-for-rs-1000-crore-ipo","cat": "Market Updates","date": "3rd Jul 2026","read": "4 min"},{"title": "A Fundamental Look At Sheela Foam's Kurlon Turnaround","url": "https://www.tradejini.com/blogs/a-fundamental-look-at-sheela-foams-kurlon-turnaround","cat": "Company Analysis","date": "2nd Jul 2026"},{"title": "OI Change on NXTOption — What It Tells Traders","url": "https://www.tradejini.com/blogs/oi-change-on-nxtoption-what-it-tells-traders","cat": "NxtOption","date": "30th Jun 2026","read": "14 min"},{"title": "Understanding Debt Funds for Everyday Investors","url": "https://www.tradejini.com/blogs/understanding-debt-funds-for-everyday-investors","cat": "Mutual Funds","date": "26th Jun 2026","read": "7 min"},{"title": "How to Trade the Bull Call Spread Using NxtOption","url": "https://www.tradejini.com/blogs/how-to-trade-the-bull-call-spread-using-nxtoption","cat": "NxtOption","date": "23rd Jun 2026","read": "11 min"},{"title": "A Fundamental Look At TVS Supply Chain's Turnaround","url": "https://www.tradejini.com/blogs/a-fundamental-look-at-tvs-supply-chains-turnaround","cat": "Company Analysis","date": "19th Jun 2026","read": "9 min"},{"title": "Laurus Labs FY26 in Review","url": "https://www.tradejini.com/blogs/laurus-labs-fy26-in-review","cat": "Company Analysis","date": "15th Jun 2026","read": "13 min"},{"title": "Inside SpaceX's $1.8 Trillion Bet on Rockets, Starlink and AI","url": "https://www.tradejini.com/blogs/inside-spacexs-18-trillion-bet-on-rockets-starlink-and-ai","cat": "Market Updates","date": "12th Jun 2026","read": "5 min"},{"cat": "NxtOption","title": "Trading the Bull Put Spread on HUL using NxtOption","url": "https://www.tradejini.com/blogs/trading-the-bull-put-spread-on-hul-using-nxtoption","date": "11th Jun 2026"},{"cat": "CubePlus Trading","title": "The CubePlus Dashboard, Now Built Around You","url": "https://www.tradejini.com/blogs/the-cubeplus-dashboard-now-built-around-you","date": "10th Jun 2026"},{"cat": "Personal Finance","title": "India's Most Expensive Cities in 2026","url": "https://www.tradejini.com/blogs/indias-most-expensive-cities-in-2026","date": "8th Jun 2026"},{"cat": "NxtOption","title": "The Cash Secured Put Strategy Using NxtOption — Part 2/2 (co-authored)","url": "https://www.tradejini.com/blogs/the-cash-secured-put-strategy-using-nxtoption--part-2","date": "30th May 2026"},{"cat": "Industry & Sector Reports","title": "Decoding the Surge in India's Power Sector","url": "https://www.tradejini.com/blogs/decoding-the-surge-in-indias-power-sector","date": "28th May 2026"},{"cat": "Stock Market Basics","title": "Decoding the Real Drivers of IT Stock Valuations","url": "https://www.tradejini.com/blogs/decoding-the-real-drivers-of-it-stock-valuations","date": "22nd May 2026"},{"cat": "NxtOption","title": "The Cash Secured Put Strategy Using NxtOption — Part 1/2 (co-authored)","url": "https://www.tradejini.com/blogs/the-cash-secured-put-strategy-using-nxtoption-part-1","date": "22nd May 2026"},{"cat": "CubePlus Trading","title": "New CubePlus Features That Make Tracking Smarter","url": "https://www.tradejini.com/blogs/new-cubeplus-features-that-make-tracking-smarter","date": "20th May 2026"},{"cat": "NxtOption","title": "How to Read OI Profile on NxtOption","url": "https://www.tradejini.com/blogs/how-to-read-oi-profile-on-nxtoption","date": "14th May 2026"},{"cat": "Industry & Sector Reports","title": "Catching the Tailwind of Indian Shipbuilding Growth","url": "https://www.tradejini.com/blogs/catching-the-tailwind-of-indian-shipbuilding-growth","date": "12th May 2026"},{"cat": "CubePlus Trading","title": "CubePlus Mobile App Just Got a Major Upgrade","url": "https://www.tradejini.com/blogs/cubeplus-mobile-app-just-got-a-major-upgrade","date": "30th Apr 2026"},{"cat": "NxtOption","title": "Trading Volatility Across Time with Calendar Spreads — Part 2/2","url": "https://www.tradejini.com/blogs/trading-volatility-across-time-with-calendar-spreads--part-2","date": "28th Apr 2026"},{"cat": "Industry & Sector Reports","title": "Navigating India's Wastewater Treatment Mega Cycle","url": "https://www.tradejini.com/blogs/navigating--indias-wastewater-treatment-mega-cycle","date": "27th Apr 2026"},{"cat": "CubePlus Trading","title": "Using Pivot Points for Precise Entry and Exit Decisions on CubePlus","url": "https://www.tradejini.com/blogs/using--pivot-points-for-precise-entry-and-exit-decisions-on-cubeplus","date": "21st Apr 2026"},{"cat": "Industry & Sector Reports","title": "Sector Analysis of the Indian Automotive Component Industry","url": "https://www.tradejini.com/blogs/sector-analysis-of-the-indian-automotive-component-industry","date": "17th Apr 2026"},{"cat": "Stock Market Basics","title": "7 Ways to Value a Stock and What Each One Actually Tells You","url": "https://www.tradejini.com/blogs/7-ways-to-value-a-stock-and-what-each-one-actually-tells-you","date": "15th Apr 2026"},{"cat": "NxtOption","title": "Trading Volatility Across Time with Calendar Spreads — Part 1/2","url": "https://www.tradejini.com/blogs/trading-volatility-across-time-with-calendar-spreads-part-12","date": "14th Apr 2026"},{"cat": "Industry & Sector Reports","title": "Strategic Outlook of The Indian Tea and Coffee Sector","url": "https://www.tradejini.com/blogs/strategic-outlook-of-the-indian-tea-and-coffee-sector","date": "10th Apr 2026"},{"cat": "CubePlus Trading","title": "After-Market Orders Explained","url": "https://www.tradejini.com/blogs/aftermarket-orders-explained","date": "8th Apr 2026"},{"cat": "CubePlus Trading","title": "Share, Import and Build Smarter Watchlists on CubePlus Mobile","url": "https://www.tradejini.com/blogs/share-import-and-build-smarter-watchlists-on-cubeplus-mobile","date": "4th Apr 2026"},{"cat": "Company Analysis","title": "Samhi Hotels Limited - A Fundamental Analysis of the Turnaround Case","url": "https://www.tradejini.com/blogs/samhi-hotels-limited-a-fundamental-analysis-of-the-turnaround-case","date": "3rd Apr 2026"},{"cat": "NxtOption","title": "A Walkthrough of the NxtOption Simulator","url": "https://www.tradejini.com/blogs/a-walkthrough-of-the-nxtoption-simulator","date": "3rd Apr 2026"},{"cat": "Market Updates","title": "What SEBI's New Algo Trading Rules Mean For You","url": "https://www.tradejini.com/blogs/what-sebis-new-algo-trading-rules-mean-for-you","date": "1st Apr 2026"},{"cat": "Industry & Sector Reports","title": "Evaluating India's Cement Industry Amid Structural Tailwinds","url": "https://www.tradejini.com/blogs/evaluating-indias-cement-industry-amid-structural-tailwinds","date": "27th Mar 2026"},{"cat": "CubePlus Trading","title": "How to Place a Cover Order on CubePlus for Options Trading","url": "https://www.tradejini.com/blogs/how-to-place-a-cover-order-on-cubeplus-for-options-trading","date": "25th Mar 2026"},{"cat": "Market Updates","title": "A Financial Breakdown of the Rs.16,660 Crore RCB Sale","url": "https://www.tradejini.com/blogs/a-financial-breakdown-of-the-16660-crore-rcb-sale","date": "25th Mar 2026"},{"cat": "NxtOption","title": "How NxtOption Embeds Your Positions Directly Into the Option Chain","url": "https://www.tradejini.com/blogs/how-nxtoption-embeds-your-positions-directly-into-the-option-chain","date": "25th Mar 2026"},{"cat": "NxtOption","title": "Understanding Shift, Width, and Hedge in NxtOption Strategy Builder","url": "https://www.tradejini.com/blogs/understanding-shift-width-and-hedge-in-nxtoption-strategy-builder","date": "23rd Mar 2026"},{"cat": "CubePlus Trading","title": "How to Place GTT Orders on Cubeplus","url": "https://www.tradejini.com/blogs/how-to-place-gtt-orders-on-cubeplus","date": "19th Mar 2026"},{"cat": "Company Analysis","title": "Analysing ITC Limited's Deep Value and Structural Growth","url": "https://www.tradejini.com/blogs/analysing-itc-limiteds-deep-value-and-structural-growth","date": "18th Mar 2026"},{"cat": "Stock Market Basics","title": "The Crude-Nifty Inverse Relationship, Why Data Disagrees","url": "https://www.tradejini.com/blogs/the-crudenifty-inverse-relationship-why-data-disagrees","date": "16th Mar 2026"},{"cat": "Industry & Sector Reports","title": "A Sectoral Breakdown of India's Cables and Wires Industry","url": "https://www.tradejini.com/blogs/a-sectoral-breakdown-of-indias-cables-and-wires-industry","date": "13th Mar 2026"},{"cat": "CubePlus Trading","title": "How to Set Up and Manage Your Watchlists on CubePlus","url": "https://www.tradejini.com/blogs/how-to-set-up-and-manage-your-watchlists-on-cubeplus","date": "10th Mar 2026"},{"cat": "NxtOption","title": "Simplify Your Options Trading with Strategy Watch on NxtOption","url": "https://www.tradejini.com/blogs/simplify-your-options-trading-with-strategy-watch-on-nxtoption","date": "9th Mar 2026"},{"cat": "CubePlus Trading","title": "Guide to Order Execution and Management on CubePlus Scalper Mode","url": "https://www.tradejini.com/blogs/guide-to-order-execution-and-management-on-cubeplus-scalper-mode","date": "7th Mar 2026"},{"cat": "Technical Analysis","title": "Lesser-Known Candlestick Patterns for Big Moves","url": "https://www.tradejini.com/blogs/lesserknown-candlestick-patterns-for-big-moves","date": "7th Mar 2026"},{"cat": "Company Analysis","title": "From Capex to Catalyst — Decoding Tarsons Products' Framework","url": "https://www.tradejini.com/blogs/from-capex-to-catalyst-decoding-tarsons-products-framework","date": "5th Mar 2026"},{"cat": "Company Analysis","title": "Dissecting Vaibhav Global's Niche Retail Model at Scale","url": "https://www.tradejini.com/blogs/dissecting-vaibhav-globals-niche-retail-model-at-scale","date": "28th Feb 2026"},{"cat": "Personal Finance","title": "The Economics of Leaving a High-Cost City vs. Staying — What the Math Misses","url": "https://www.tradejini.com/blogs/the-economics-of-leaving-a-highcost-city-vs-staying-what-the-math-misses","date": "27th Feb 2026"},{"cat": "CubePlus Trading","title": "How to Use CubePlus Alerts to Trade with Precision","url": "https://www.tradejini.com/blogs/how-to-use-cubeplus-alerts-to-trade-with-precision","date": "25th Feb 2026"},{"cat": "NxtOption","title": "How to Use NxtOption's Group Adjust Feature","url": "https://www.tradejini.com/blogs/how-to-use-nxtoptions-group-adjust-feature","date": "25th Feb 2026"},{"cat": "CubePlus Trading","title": "Customizing Your Trading Experience with CubePlus Settings","url": "https://www.tradejini.com/blogs/customizing-your-trading-experience-with-cubeplus-settings","date": "20th Feb 2026"},{"cat": "Industry & Sector Reports","title": "A Comprehensive Analysis of India's Logistics and Supply Chain Sector Pt 2/2","url": "https://www.tradejini.com/blogs/a-comprehensive-analysis-of-indias-logistics-and-supply-chain-sector-part-2","date": "19th Feb 2026"},{"cat": "Mutual Funds","title": "Converting SIP Savings into Steady Monthly Income Through an SWP","url": "https://www.tradejini.com/blogs/converting-sip-savings-into-steady-monthly-income-through-an-swp","date": "19th Feb 2026"},{"cat": "NxtOption","title": "NxtOption Strategy Watch Explained","url": "https://www.tradejini.com/blogs/nxtoption-strategy-watch-explained","date": "16th Feb 2026"},{"cat": "CubePlus Trading","title": "Using Corporate Actions, Peers, Deals, and News Effectively on CubePlus","url": "https://www.tradejini.com/blogs/using-corporate-actions-peers-deals-and--news-effectively-on-cubeplus","date": "13th Feb 2026"},{"cat": "Industry & Sector Reports","title": "A Comprehensive Analysis of India's Logistics and Supply Chain Sector Pt 1/2","url": "https://www.tradejini.com/blogs/a-comprehensive-analysis-of-indias-logistics-and-supply-chain-sector-part-1","date": "12th Feb 2026"},{"cat": "NxtOption","title": "NxtOption Alerts for Smarter Strategy-Level Monitoring","url": "https://www.tradejini.com/blogs/nxtoption-alerts-for-smarter-strategylevel-monitoring","date": "10th Feb 2026"},{"cat": "Industry & Sector Reports","title": "The Packaging Industry in India – Structure, End-Use Demand & Industry Dynamics","url": "https://www.tradejini.com/blogs/the-packaging-industry-in-india-structure-enduse-demand-and-industry-dynamics","date": "6th Feb 2026"},{"cat": "CubePlus Trading","title": "Customizing Columns in CubePlus for Clearer Position and Order Tracking","url": "https://www.tradejini.com/blogs/customizing-columns-in-cubeplus-for-clearer-position-and-order-tracking","date": "6th Feb 2026"},{"cat": "NxtOption","title": "How to Use the MultiStrike OI Chart on NxtOption","url": "https://www.tradejini.com/blogs/how-to-use-the-multistrike-oi-chart-on-nxtoption","date": "3rd Feb 2026"},{"cat": "Industry & Sector Reports","title": "India's Fertilizer Industry, Market Trends and Future Prospects","url": "https://www.tradejini.com/blogs/indias-fertilizer-industry-market-trends-and-future-prospects","date": "30th Jan 2026"},{"cat": "Business Decoded","title": "How the India EU FTA Could Reshape Indian Businesses","url": "https://www.tradejini.com/blogs/how-the-india-eu-fta-could-reshape-indian-businesses","date": "29th Jan 2026"},{"cat": "Stock Market Basics","title": "What Is High-Frequency Trading (HFT)?","url": "https://www.tradejini.com/blogs/what-is-highfrequency-trading-hft","date": "28th Jan 2026"},{"cat": "Technical Analysis","title": "How McGinley Dynamic and Majority Rule Improve Trend Decisions","url": "https://www.tradejini.com/blogs/how-mcginley-dynamic-and-majority-rule-improve-trend-decisions","date": "27th Jan 2026"},{"cat": "Company Analysis","title": "A Year of Execution and Strategic Transformation at Laurus Labs Ltd.","url": "https://www.tradejini.com/blogs/a-year-of-execution-and-strategic-transformation-at-laurus-labs-ltd","date": "22nd Jan 2026"},{"cat": "Stock Market Basics","title": "How to Invest During Quarterly Results","url": "https://www.tradejini.com/blogs/how-to-invest-during-quarterly-results","date": "21st Jan 2026"},{"cat": "CubePlus Trading","title": "Using the Results Calendar on CubePlus","url": "https://www.tradejini.com/blogs/using-the-results-calendar-on-cubeplus","date": "16th Jan 2026"},{"cat": "Company Analysis","title": "Zuari Industries Limited Viewed Through Assets and Capital Returns","url": "https://www.tradejini.com/blogs/zuari-industries-limited-viewed-through-assets-and-capital-returns","date": "16th Jan 2026"},{"cat": "CubePlus Trading","title": "Exploring the Financials Dashboard on CubePlus","url": "https://www.tradejini.com/blogs/exploring-the-financials-dashboard-on-cubeplus","date": "12th Jan 2026"},{"cat": "Technical Analysis","title": "Understanding Heikin Ashi Candles for Trend Trading","url": "https://www.tradejini.com/blogs/understanding-heikin-ashi-candles-for-trend-trading","date": "10th Jan 2026"},{"cat": "Personal Finance","title": "9 Smart Money Moves for 2026","url": "https://www.tradejini.com/blogs/9-smart-money-moves-for-2026","date": "9th Jan 2026"},{"cat": "Company Analysis","title": "Seamec Ltd Operating an Asset-Driven Offshore Services Business","url": "https://www.tradejini.com/blogs/seamec-ltd-operating-an-assetdriven-offshore-services-business","date": "8th Jan 2026"},{"cat": "Stock Market Basics","title": "Enron Corporation and the Corporate Fraud That Misled Markets","url": "https://www.tradejini.com/blogs/enron-corporation-and-the-corporate-fraud-that-misled-markets","date": "5th Jan 2026"},{"cat": "Stock Market Basics","title": "Tulip Mania and the Birth of Financial Bubbles","url": "https://www.tradejini.com/blogs/tulip-mania-and-the-birth-of-financial-bubbles","date": "30th Dec 2025"},{"cat": "Industry & Sector Reports","title": "A Fundamental Perspective of the Indian Alcohol Industry","url": "https://www.tradejini.com/blogs/a-fundamental-perspective-of-the-indian-alcohol-industry","date": "26th Dec 2025"},{"cat": "Stock Market Basics","title": "Investment Options to Park Idle Cash in India","url": "https://www.tradejini.com/blogs/investment-options-to-park-idle-cash-in-india","date": "24th Dec 2025"},{"cat": "Company Analysis","title": "ABS Marine Anchoring Growth with Long-Term Offshore Contracts","url": "https://www.tradejini.com/blogs/abs-marine-anchoring-growth-with-longterm-offshore-contracts","date": "19th Dec 2025"},{"cat": "NxtOption","title": "Rolling an Open Position with Adjust Button in NxtOption","url": "https://www.tradejini.com/blogs/rolling-an-open-position-with-adjust-button-in-nxtoption","date": "17th Dec 2025"},{"cat": "Stock Market Basics","title": "Why the Early Years of Compounding Make Progress Feel Invisible","url": "https://www.tradejini.com/blogs/why-the-early-years-of-compounding-make-progress-feel-invisible","date": "17th Dec 2025"},{"cat": "Market Updates","title": "Control Print Ltd Stock: Latest Price Updates and Market Insights","url": "https://www.tradejini.com/blogs/control-print-ltd--the-center-of-indias-coding-and-marking-ecosystem","date": "16th Dec 2025"},{"cat": "Technical Analysis","title": "Understanding Market Participation Through Positive and Negative Volume Indices","url": "https://www.tradejini.com/blogs/understanding-market-participation-through-positive-and-negative-volume-indices","date": "12th Dec 2025"},{"cat": "Company Analysis","title": "Control Print Ltd at the Center of India's Coding and Marking Ecosystem","url": "https://www.tradejini.com/blogs/control-print-ltd-at-the-center-of-indias-coding-and-marking-ecosystem","date": "10th Dec 2025"},{"cat": "CubePlus Trading","title": "How to Use Bulk Modify on CubePlus to Manage Multiple Trades Efficiently","url": "https://www.tradejini.com/blogs/how-to-use-bulk-modify-on-cubeplus-to-manage-multiple-trades-efficiently","date": "9th Dec 2025"},{"cat": "Company Analysis","title": "Q2 FY26 Performance Review of Entero, Senores, Acutaas, Alkem and Laurus","url": "https://www.tradejini.com/blogs/q2-fy26-performance-review-of-entero-senores-acutaas-alkem-and-laurus","date": "6th Dec 2025"},{"cat": "Market Updates","title": "Why Traders Are Moving to Dubai From India","url": "https://www.tradejini.com/blogs/why-traders-are-moving-to-dubai-from-india","date": "4th Dec 2025"},{"cat": "Industry & Sector Reports","title": "India's Maritime Economy — Complete Sector Analysis (Part 3/3)","url": "https://www.tradejini.com/blogs/indias-maritime-economy--complete-sector-analysis--part-33","date": "1st Dec 2025"},{"cat": "CubePlus Trading","title": "How to Use Bracket Orders Effectively on CubePlus","url": "https://www.tradejini.com/blogs/how-to-use-bracket-orders-effectively-on-cubeplus","date": "27th Nov 2025"},{"cat": "Business Decoded","title": "Can NMDC Re-Rate as FY27 Earnings Kick In?","url": "https://www.tradejini.com/blogs/can-nmdc-rerate-as-fy27-earnings-kick-in","date": "27th Nov 2025"},{"cat": "Stock Market Basics","title": "The Philip Fisher Approach to Owning Stocks Like a Business Owner","url": "https://www.tradejini.com/blogs/the-philip-fisher-approach-to-owning-stocks-like-a-business-owner","date": "25th Nov 2025"},{"cat": "Industry & Sector Reports","title": "India's Maritime Economy — Complete Sector Analysis (Part 2/3)","url": "https://www.tradejini.com/blogs/indias-maritime-economy--complete-sector-analysis--part-23","date": "24th Nov 2025"},{"cat": "Industry & Sector Reports","title": "India's Maritime Economy — Complete Sector Analysis (Part 1/3)","url": "https://www.tradejini.com/blogs/indias-maritime-economy--complete-sector-analysis--part-13","date": "19th Nov 2025"},{"cat": "Stock Market Basics","title": "Pair Trading Made Simple with a Clear Look at Statistical Arbitrage in India","url": "https://www.tradejini.com/blogs/pair-trading-made-simple-with-a-clear-look-at-statistical-arbitrage-in-india","date": "17th Nov 2025"},{"cat": "Business Decoded","title": "How Varun Beverages Is Responding to Campa Cola's Comeback","url": "https://www.tradejini.com/blogs/how-varun-beverages-is-responding-to-campa-colas-comeback","date": "13th Nov 2025"},{"cat": "CubePlus Trading","title": "Reading the Market Through Seasonality for November 2025","url": "https://www.tradejini.com/blogs/reading-the-market-through-seasonality-for-november-2025","date": "12th Nov 2025"},{"cat": "Company Analysis","title": "A Performance Review of Gravita India, VA Tech Wabag, and Deep Industries","url": "https://www.tradejini.com/blogs/a-performance-review-of-gravita-india-va-tech-wabag-and-deep-industries","date": "10th Nov 2025"},{"cat": "Market Updates","title": "NSE to Launch Pre-Open Session for Futures Contracts from December 8, 2025","url": "https://www.tradejini.com/blogs/nse-to-launch-preopen-session-for-futures-contracts-from-december-8-2025","date": "8th Nov 2025"},{"cat": "Stock Market Basics","title": "How Peter Lynch Picked Winning Stocks — A Simple Look at His Investment Strategy","url": "https://www.tradejini.com/blogs/how-peter-lynch-picked-winning-stocks--a-simple-look-at-his-investment-strategy","date": "6th Nov 2025"},{"cat": "Industry & Sector Reports","title": "Why India Could Become the World's Fastest-Growing Hospitality Market","url": "https://www.tradejini.com/blogs/why-india-could-become-the-worlds-fastestgrowing-hospitality-market","date": "5th Nov 2025"},{"cat": "Company Analysis","title": "Is Thyrocare Entering Its Most Profitable Phase Yet?","url": "https://www.tradejini.com/blogs/is-thyrocare-entering-its-most-profitable-phase-yet","date": "4th Nov 2025"},{"cat": "NxtOption","title": "Credit Spread vs Debit Spread Explained","url": "https://www.tradejini.com/blogs/credit-spread-vs-debit-spread-explained","date": "1st Nov 2025"},{"cat": "CubePlus Trading","title": "How to Use 'Active by Volume' and 'Active by Value' Data for Smarter Trading","url": "https://www.tradejini.com/blogs/how-to-use-active-by-volume-and-active-by-value-data-for-smarter-trading-decisions","date": "31st Oct 2025"},{"cat": "Company Analysis","title": "Is Action Construction Equipment Rising to Become India's Biggest Equipment Powerhouse?","url": "https://www.tradejini.com/blogs/is-action-construction-equipment-rising-to-become-indias-biggest-equipment-powerhouse","date": "28th Oct 2025"},{"cat": "Stock Market Basics","title": "What Sun Tzu Can Teach Modern Traders and Investors","url": "https://www.tradejini.com/blogs/what-sun-tzu-can-teach-modern-traders-and-investors","date": "24th Oct 2025"},{"cat": "Company Analysis","title": "Petronet LNG is Driving India's Next Wave of Gas Demand","url": "https://www.tradejini.com/blogs/petronet-lng-is-driving-indias-next-wave-of-gas-demand","date": "23rd Oct 2025"},{"cat": "CubePlus Trading","title": "Identifying Market Momentum with 'High Breakers' and 'Low Breakers' (co-authored)","url": "https://www.tradejini.com/blogs/identifying-market-momentum-with-high-breakers-and-low-breakers","date": "18th Oct 2025"},{"cat": "Stock Market Basics","title": "How Game Theory Can Help You Predict Moves in the Indian Stock Market","url": "https://www.tradejini.com/blogs/how-game-theory-can-help-you-predict-moves-in-the-indian-stock-market","date": "16th Oct 2025"},{"cat": "Stock Market Basics","title": "How Debtor Days Reveal Financial Strength","url": "https://www.tradejini.com/blogs/how-debtor-days-reveal-financial-strength","date": "16th Oct 2025"},{"cat": "Industry & Sector Reports","title": "The Business of Sustainability: Inside India's Recycling Boom","url": "https://www.tradejini.com/blogs/the-business-of-sustainability-inside-indias-recycling-boom","date": "15th Oct 2025"},{"cat": "Company Analysis","title": "Can VBL Defend Its Moat Against New Challengers?","url": "https://www.tradejini.com/blogs/can-vbl-defend-its-moat-against-new-challengers","date": "10th Oct 2025"},{"cat": "Stock Market Basics","title": "Capital Required for Option Selling","url": "https://www.tradejini.com/blogs/capital-required-for-option-selling","date": "8th Oct 2025"},{"cat": "Business Decoded","title": "Green Energy Powerhouse: NLC India Ltd.","url": "https://www.tradejini.com/blogs/green-energy-powerhouse--nlc-india-ltd","date": "6th Oct 2025"},{"cat": "CubePlus Trading","title": "Delivery Volume in the Cash Market: A Key Indicator for Investors (co-authored)","url": "https://www.tradejini.com/blogs/delivery-volume-in-the-cash-market-a-key-indicator-for-investors","date": "6th Oct 2025"},{"cat": "Company Analysis","title": "Could Laxmi Dental Be the Hidden Gem in Healthcare? (co-authored)","url": "https://www.tradejini.com/blogs/could-laxmi-dental-be-the-hidden-gem-in-healthcare","date": "4th Oct 2025"},{"cat": "Stock Market Basics","title": "How Brokers & Institutions 'Hunt' Stop Losses: Theory, Motives & Scenarios","url": "https://www.tradejini.com/blogs/how-brokers--institutions-hunt-stop-losses-theory-motives--scenarios-in-indian-markets","date": "26th Sep 2025"},{"cat": "Company Analysis","title": "Sky Gold Capturing Market Opportunities in Jewelry","url": "https://www.tradejini.com/blogs/sky-gold-capturing-market-opportunities-in-jewelry","date": "25th Sep 2025"},{"cat": "Industry & Sector Reports","title": "Unlocking Growth in India's $90 Billion Jewellery Industry","url": "https://www.tradejini.com/blogs/unlocking-growth-in-indias-90-billion-jewellery-industry","date": "25th Sep 2025"},{"cat": "Company Analysis","title": "IGI India – A Unique Niche Business with Industry Potential","url": "https://www.tradejini.com/blogs/igi-india--a-unique-niche-business-with-industry-potential","date": "18th Sep 2025"},{"cat": "Stock Market Basics","title": "Is Option Selling Profitable? Strategies, Risks and Market Insights","url": "https://www.tradejini.com/blogs/is-option-selling-profitable-strategies-risks-and-market-insights","date": "17th Sep 2025"},{"cat": "Industry & Sector Reports","title": "A Comprehensive Industry Analysis of India's Hospital Sector","url": "https://www.tradejini.com/blogs/a-comprehensive-industry-analysis-of-indias-hospital-sector","date": "12th Sep 2025"},{"cat": "Company Analysis","title": "Is Varroc's Market Valuation on Solid Footing?","url": "https://www.tradejini.com/blogs/is-varrocs-market-valuation-on-solid-footing","date": "11th Sep 2025"},{"cat": "Stock Market Basics","title": "Pump and Dump Schemes Explained for Investors","url": "https://www.tradejini.com/blogs/pump-and-dump-schemes-explained-for-investors","date": "10th Sep 2025"},{"cat": "Company Analysis","title": "Structural Growth Outlook for GE Vernova in a Transforming Energy Landscape","url": "https://www.tradejini.com/blogs/structural-growth-outlook-for-ge-vernova-in-a-transforming-energy-landscape","date": "6th Sep 2025"},{"cat": "Personal Finance","title": "The Hidden Cost of Holding Cash When Markets Rally","url": "https://www.tradejini.com/blogs/the-hidden-cost-of-holding-cash-when-markets-rally","date": "4th Sep 2025"},{"cat": "Company Analysis","title": "Ajax Engineering A Strong Play on India's Infrastructure Mechanisation","url": "https://www.tradejini.com/blogs/ajax-engineering-a-strong-play-on-indias-infrastructure-mechanisation","date": "30th Aug 2025"},{"cat": "NxtOption","title": "The Iron Condor: A Neutral Strategy for Sideways Markets","url": "https://www.tradejini.com/blogs/the-iron-condor-a-neutral-strategy-for-sideways-markets","date": "29th Aug 2025"},{"cat": "Company Analysis","title": "Honeywell Automation India Positioned for Long-Term Value Creation","url": "https://www.tradejini.com/blogs/honeywell-automation-india-positioned-for-longterm-value-creation","date": "22nd Aug 2025"},{"cat": "Company Analysis","title": "Jyoti CNC Poised for the Next Growth Phase","url": "https://www.tradejini.com/blogs/jyoti-cnc-poised-for-the-next-growth-phase","date": "16th Aug 2025"},{"cat": "Stock Market Basics","title": "How to Invest in American Stocks with Tradejini INX GA (co-authored)","url": "https://www.tradejini.com/blogs/how-to-invest-in-american-stocks-with-tradejini-inx-ga-a-stepbystep-guide","date": "12th Aug 2025"},{"cat": "CubePlus Trading","title": "Explore Open = High and Open = Low Stocks with Ease on Tradejini CubePlus","url": "https://www.tradejini.com/blogs/explore-open--high-and-open--low-stocks-with-ease-on-tradejini-cubeplus","date": "8th Aug 2025"},{"cat": "Company Analysis","title": "Alkem Laboratories Riding on Resilient Growth","url": "https://www.tradejini.com/blogs/alkem-laboratories-riding-on-resilient-growth","date": "7th Aug 2025"},{"cat": "CubePlus Trading","title": "The CubePlus Guide to Mutual Fund Investing (co-authored)","url": "https://www.tradejini.com/blogs/the-cubeplus-guide-to-mutual-fund-investing","date": "6th Aug 2025"},{"cat": "Company Analysis","title": "Biocon Limited's Strategic Growth in Generics, Biosimilars & Research Services (co-authored)","url": "https://www.tradejini.com/blogs/biocon-limiteds-strategic-growth-in-generics-biosimilars--research-services","date": "2nd Aug 2025"},{"cat": "NxtOption","title": "How to Trade Reversals with Bull Put Spreads","url": "https://www.tradejini.com/blogs/how-to-trade-reversals-with-bull-put-spreads","date": "1st Aug 2025"},{"cat": "Company Analysis","title": "Assessing Valuation and Opportunity in Tata Chemicals","url": "https://www.tradejini.com/blogs/assessing-valuation-and-opportunity-in-tata-chemicals","date": "31st Jul 2025"},{"cat": "Company Analysis","title": "BLS International A Scalable Play on Visa and Citizen Services","url": "https://www.tradejini.com/blogs/bls-international-a-scalable-play-on-visa-and-citizen-services","date": "30th Jul 2025"},{"cat": "NxtOption","title": "How to Interpret Open Interest and Price Data: A Trader's Guide","url": "https://www.tradejini.com/blogs/how-to-interpret-open-interest-and-price-data-a-traders-guide","date": "25th Jul 2025"},{"cat": "Business Decoded","title": "Why DMart Trades at a Premium and What It Means","url": "https://www.tradejini.com/blogs/why-dmart-trades-at-a-premium-and-what-it-Means","date": "24th Jul 2025"},{"cat": "Company Analysis","title": "PG Electroplast Where India's Consumer Electronics Take Shape","url": "https://www.tradejini.com/blogs/pg-electroplast-where-indias-consumer-electronics-take-shape","date": "23rd Jul 2025"},{"cat": "CubePlus Trading","title": "Intraday Trading with Bracket Orders on Tradejini CubePlus","url": "https://www.tradejini.com/blogs/intraday-trading-with-bracket-orders-on-tradejini-cubeplus","date": "18th Jul 2025"},{"cat": "Company Analysis","title": "Engineering Defense Growth with CFF Fluid Control Ltd.","url": "https://www.tradejini.com/blogs/engineering-defense-growth-with-cff-fluid-control-ltd","date": "16th Jul 2025"},{"cat": "NxtOption","title": "Call Ratio Spread Explained Through Real Trades","url": "https://www.tradejini.com/blogs/call-ratio-spread-explained-through-real-trades","date": "14th Jul 2025"},{"cat": "Stock Market Basics","title": "Understanding Stock Valuation Through Key Financial Ratios","url": "https://www.tradejini.com/blogs/understanding-stock-valuation-through-key-financial-ratios","date": "11th Jul 2025"},{"cat": "Company Analysis","title": "Acutaas Chemicals Ltd on a Growth Track in Specialty Chemicals and CDMO","url": "https://www.tradejini.com/blogs/acutaas-chemicals-ltd-on-a--growth-track-in-specialty-chemicals-and-cdmo","date": "5th Jul 2025"},{"cat": "Stock Market Basics","title": "What is Percentage Gain?","url": "https://www.tradejini.com/blogs/what-is-percentage-gain","date": "4th Jul 2025"},{"cat": "Stock Market Basics","title": "Gold's Journey Through Markets, Technology & Global Power Plays (co-authored)","url": "https://www.tradejini.com/blogs/golds-journey-through-markets-technology--global-power-plays","date": "2nd Jul 2025"},{"cat": "Company Analysis","title": "Praveg Ltd. Positioned for Margin Expansion and Long-Term Profitability","url": "https://www.tradejini.com/blogs/praveg-ltd-positioned-for-margin-expansion-and-longterm-profitability","date": "2nd Jul 2025"},{"cat": "Company Analysis","title": "Analyzing Karnataka Bank's Transformation and Financial Strength","url": "https://www.tradejini.com/blogs/analyzing-karnataka-banks-transformation-and-financial-strength","date": "30th Jun 2025"},{"cat": "Mutual Funds","title": "How to Start SIP: A Guide on Mutual Funds Online & How Mutual Fund Payments Work","url": "https://www.tradejini.com/blogs/how-to-start-sip-a-guide-on-mutual-funds-online--how-mutual-fund-payments-work","date": "27th Jun 2025"},{"cat": "Mutual Funds","title": "SIP vs Lumpsum: Which One is Better in 2025?","url": "https://www.tradejini.com/blogs/sip-vs-lumpsum-which-one-is-better-in-2025","date": "26th Jun 2025"},{"cat": "Mutual Funds","title": "Haircut in Margin Trading: What They Are and Why They Matter","url": "https://www.tradejini.com/blogs/haircut-in-margin-trading-what-they-are-and-why-they-matter","date": "25th Jun 2025"},{"cat": "Mutual Funds","title": "5 Common Mistakes Traders Make With Pledged Mutual Funds","url": "https://www.tradejini.com/blogs/5-common-mistakes-traders-make-with-pledged-mutual-funds","date": "24th Jun 2025"},{"cat": "Mutual Funds","title": "How to Invest Rs.500 Monthly in Mutual Funds","url": "https://www.tradejini.com/blogs/how-to-invest-500-monthly-in-mutual-funds","date": "21st Jun 2025"},{"cat": "Industry & Sector Reports","title": "Port-led Development in India: A Sectoral Outlook","url": "https://www.tradejini.com/blogs/portled-development-in-india-a-sectoral-outlook-to-fy30","date": "19th Jun 2025"},{"cat": "Mutual Funds","title": "Cash vs Non-Cash Component: How Brokers Allocate Your Margin","url": "https://www.tradejini.com/blogs/cash-vs-noncash-component-how-brokers-allocate-your-margin","date": "18th Jun 2025"},{"cat": "Mutual Funds","title": "Here's Why Pledging Mutual Funds Makes More Sense","url": "https://www.tradejini.com/blogs/heres-why-pledging-mutual-funds-makes-more-sense","date": "16th Jun 2025"},{"cat": "Mutual Funds","title": "Understanding Cut-Off Times and NAV Allotment for Mutual Fund Buyers","url": "https://www.tradejini.com/blogs/understanding-cutoff-times-and-nav-allotment-for-mutual-fund-buyers","date": "16th Jun 2025"},{"cat": "Mutual Funds","title": "Understanding Mutual Fund Returns","url": "https://www.tradejini.com/blogs/understanding-mutual-fund-returns","date": "12th Jun 2025"},{"cat": "Market Updates","title": "How Technology is Redefining the Future of Gold Demand (co-authored)","url": "https://www.tradejini.com/blogs/how-technology-is-redefining-the-future-of-gold-demand","date": "11th Jun 2025"},{"cat": "Company Analysis","title": "Senores Pharma Capitalizing on CDMO Tailwinds for Global Ascent","url": "https://www.tradejini.com/blogs/senores-pharma-capitalizing-on-cdmo-tailwinds-for-global-ascent","date": "10th Jun 2025"},{"cat": "Company Analysis","title": "Watertech Leader Transforming Dirty Water into Liquid Gold (VA Tech Wabag)","url": "https://www.tradejini.com/blogs/positioning-va-tech-wabag-as-a-global-leader-in-water-solutions","date": "6th Jun 2025"},{"cat": "Mutual Funds","title": "What Is a Mutual Fund?","url": "https://www.tradejini.com/blogs/what-is-a-mutual-fund","date": "3rd Jun 2025"},{"cat": "Company Analysis","title": "Capacit'e Infraprojects Unlocking Urban Growth","url": "https://www.tradejini.com/blogs/capacite-infraprojects-unlocking-urban-growth","date": "31st May 2025"},{"cat": "Company Analysis","title": "S H Kelkar and Company Strengthens Market Presence Through Innovation","url": "https://www.tradejini.com/blogs/s-h-kelkar-and-company-strengthens-market-presence-through-innovation","date": "28th May 2025"},{"cat": "Market Updates","title": "Rs.40,000 Crore Catalyst for Defence Self-Reliance","url": "https://www.tradejini.com/blogs/40000-crore-catalyst-for-defence-selfreliance","date": "24th May 2025"},{"cat": "Company Analysis","title": "Gravita India's Recycling Leadership with a Global Edge","url": "https://www.tradejini.com/blogs/gravita-indias-recycling-leadership-with-a-global-edge","date": "23rd May 2025"},{"cat": "Company Analysis","title": "Deep Industries as a Proxy Play on Oil and Gas","url": "https://www.tradejini.com/blogs/deep-industries-as-a-proxy-play-on-oil-and-gas","date": "20th May 2025"},{"cat": "Company Analysis","title": "How Zaggle is Driving Business Agility Through SaaS & FinTech","url": "https://www.tradejini.com/blogs/how-zaggle-is-driving-business-agility-through-saas--fintech","date": "9th May 2025"},{"cat": "Company Analysis","title": "Mahindra Logistics Positioned for Transformational Revenue Growth","url": "https://www.tradejini.com/blogs/mahindra-logistics-positioned-for-transformational-revenue-growth","date": "7th May 2025"},{"cat": "Business Decoded","title": "Why Wealthy Indians Are Buying Second Homes Abroad?","url": "https://www.tradejini.com/blogs/why-wealthy-indians-are-buying-second-homes-abroad","date": "5th May 2025"},{"cat": "Mutual Funds","title": "Investing in Precious Metals Through ETFs in India","url": "https://www.tradejini.com/blogs/investing-in-precious-metals-through-etfs-in-india","date": "2nd May 2025"},{"cat": "Industry & Sector Reports","title": "Analyzing India's Battery Sector Through Amara Raja and Exide","url": "https://www.tradejini.com/blogs/analyzing-indias-battery-sector-through-amara-raja-and-exide","date": "24th Apr 2025"},{"cat": "Company Analysis","title": "Entero Healthcare Solutions and the Transformation of Healthcare Distribution","url": "https://www.tradejini.com/blogs/entero-healthcare-solutions-and-the-transformation-of-healthcare-distribution","date": "21st Apr 2025"},{"cat": "Company Analysis","title": "India's Infra Growth Open Doors for Interarch","url": "https://www.tradejini.com/blogs/indias-infra-growth-open-doors-for-interarch","date": "11th Apr 2025"},{"cat": "Market Updates","title": "SEBI Launches 'MITRA' to Help Investors Trace Inactive Mutual Fund Folios","url": "https://www.tradejini.com/blogs/sebi-launches-mitra-to-help-investors-trace-inactive-mutual-fund-folios","date": "8th Apr 2025"},{"cat": "Industry & Sector Reports","title": "India's CDMO Boom: A Rising Global Powerhouse","url": "https://www.tradejini.com/blogs/indias-cdmo-boom-a-rising-global-powerhouse","date": "7th Apr 2025"},{"cat": "Company Analysis","title": "How RateGain is Unlocking ₹2000 Cr Potential","url": "https://www.tradejini.com/blogs/how-rategain-is-unlocking-2000-cr-potential","date": "25th Mar 2025"}],"videos": [{"title": "Rolling Positions With Group adjust on NxtOption","url": "https://youtu.be/GcBAGY9ereg","yt": "GcBAGY9ereg","dur": "","month": "Aug 2026","short": false},{"title": "Your Position Exit Automated with Shield on CubePlus","url": "https://youtu.be/jQqVwhzlSfQ","yt": "jQqVwhzlSfQ","dur": "","month": "Aug 2026","short": false},{"title": "The Ultimate Stock Market Debate","url": "https://youtu.be/bhazCKdQws4","yt": "bhazCKdQws4","dur": "","month": "Aug 2026","short": false},{"title": "CubePlus My Holdings: New Customization Features","url": "https://youtu.be/htmJvHiiC68","yt": "htmJvHiiC68","dur": "","month": "Jul 2026","short": false},{"title": "Should You Invest in Real Estate or Stock Market?","url": "https://youtu.be/SQMe7eR0D0I","yt": "SQMe7eR0D0I","dur": "","month": "Jun 2026","short": false},{"title": "Weekly Market Wrap | Markets, Rupee, Gold & Silver, Nikkei & More","url": "https://youtube.com/shorts/lOVn39wd22Q","yt": "lOVn39wd22Q","dur": "","month": "Jun 2026","short": true},{"title": "Markets, Rupee, Crude Oil & More | Top Headlines | June 08, 2026","url": "https://youtube.com/shorts/-dgQVdP5iOc","yt": "-dgQVdP5iOc","dur": "","month": "Jun 2026","short": true},{"title": "Smarter Tracking with New CubePlus Features","url": "https://youtu.be/ljRNPj-Cyvw?si=5CXxf9W0gADTqB8o","yt": "ljRNPj-Cyvw","dur": "6:00","month": "May 2026","short": false},{"title": "How to View Holdings Breakup on CubePlus | Explained","url": "https://youtu.be/BzxzxZxm3SY?si=bWAsi2iZ7-BLIUIX","yt": "BzxzxZxm3SY","dur": "2:30","month": "May 2026","short": false},{"title": "Samhi Hotels Explained | Business Model, Growth, Risks & Valuation","url": "https://www.youtube.com/watch?v=PreTrYGCIp8","yt": "PreTrYGCIp8","dur": "5:50","month": "Apr 2026","short": false},{"title": "How Algo Platforms Are Changing Trading in India | Inside Algo Trading: Part 1","url": "https://www.youtube.com/watch?v=dKwIXruN6LQ","yt": "dKwIXruN6LQ","dur": "7:08","month": "Mar 2026","short": false},{"title": "Valley of Disappointment","url": "https://www.youtube.com/watch?v=_0yUvGIZMl8","yt": "_0yUvGIZMl8","dur": "3:56","month": "Feb 2026","short": false},{"title": "NxtOption Simulator","url": "https://www.youtube.com/watch?v=L7i4qARYNIQ","yt": "L7i4qARYNIQ","dur": "1:14","month": "Feb 2026","short": false},{"title": "Peter Lynch Playbook","url": "https://www.youtube.com/watch?v=2jynyBvFkVo","yt": "2jynyBvFkVo","dur": "5:52","month": "Jan 2026","short": false},{"title": "NxtOption is Your 'What If'","url": "https://www.youtube.com/watch?v=16HEDJrIsiA","yt": "16HEDJrIsiA","dur": "1:15","month": "Jan 2026","short": false},{"title": "Christmas Cake","url": "https://www.youtube.com/watch?v=oO06loUa4gA","yt": "oO06loUa4gA","dur": "1:43","month": "Dec 2025","short": false},{"title": "NxtOption Market Movers EXPLAINED","url": "https://www.youtube.com/watch?v=QzR8nVN4vHY","yt": "QzR8nVN4vHY","dur": "4:11","month": "Dec 2025","short": false},{"title": "OI Spurts EXPLAINED in NXTOption","url": "https://www.youtube.com/watch?v=4H7juu9P2wI","yt": "4H7juu9P2wI","dur": "5:21","month": "Dec 2025","short": false},{"title": "Do This BEFORE Your Futures Roll Over | NXTOption Rollover Analysis Explained","url": "https://www.youtube.com/watch?v=4uM_rdIRlJw","yt": "4uM_rdIRlJw","dur": "3:36","month": "Dec 2025","short": false},{"title": "India's Construction Boom Explained | Webinar with Praveen George (Promo)","url": "https://www.youtube.com/watch?v=rmfmK-P5sU4","yt": "rmfmK-P5sU4","dur": "0:18","month": "Nov 2025","short": false},{"title": "Predict Option Prices BEFORE the Market Moves | 'What If' Feature Explained","url": "https://www.youtube.com/watch?v=IqZKcMiWSlE","yt": "IqZKcMiWSlE","dur": "5:45","month": "Nov 2025","short": false},{"title": "See the FUTURE of Your Options Trade | 'What If' Feature on NXToption","url": "https://www.youtube.com/watch?v=vGEuh_3NshA","yt": "vGEuh_3NshA","dur": "5:45","month": "Nov 2025","short": false},{"title": "Decoding India's Construction Boom | FREE Webinar | Tradejini","url": "https://www.youtube.com/watch?v=-W7Bj8fSU5I","yt": "-W7Bj8fSU5I","dur": "59:26","month": "Nov 2025","short": false},{"title": "The Indian Company Building Planes for Boeing & Airbus | Tata Advanced Systems Story","url": "https://www.youtube.com/watch?v=MNz6jqk-HME","yt": "MNz6jqk-HME","dur": "1:01","month": "Nov 2025","short": false},{"title": "This INSANELY Fast Tool Makes Option Scalping Easy","url": "https://www.youtube.com/watch?v=KmLMiWZ-QLY","yt": "KmLMiWZ-QLY","dur": "8:26","month": "Nov 2025","short": false},{"title": "How to Build Options Strategies with NXToption Strategy Builder","url": "https://www.youtube.com/watch?v=6We0FSgAWZg","yt": "6We0FSgAWZg","dur": "7:35","month": "Oct 2025","short": false},{"title": "How to Build Options Strategies with NXToption Strategy Builder (Tutorial)","url": "https://www.youtube.com/watch?v=XCME1TqJbq4","yt": "XCME1TqJbq4","dur": "7:35","month": "Oct 2025","short": false},{"title": "BRAHMOS Missile Powering Indian Company | Data Patterns Full Breakdown","url": "https://www.youtube.com/watch?v=PI2UhKqNHos","yt": "PI2UhKqNHos","dur": "5:29","month": "Oct 2025","short": false},{"title": "Master the Market with Strategy Watch on NxtOption!","url": "https://www.youtube.com/watch?v=rdqRZlf0oss","yt": "rdqRZlf0oss","dur": "11:01","month": "Sep 2025","short": false},{"title": "Take Control of Your Trades with Strategy Builder on NxtOption!","url": "https://www.youtube.com/watch?v=xTCLj78YhWw","yt": "xTCLj78YhWw","dur": "9:23","month": "Sep 2025","short": false},{"title": "Market Direction Made Easy with NxtOption's Easy Options!","url": "https://www.youtube.com/watch?v=Zrb3oDGSOHs","yt": "Zrb3oDGSOHs","dur": "10:43","month": "Sep 2025","short": false},{"title": "Decode Market Moves with Implied Volatility on NxtOption","url": "https://www.youtube.com/watch?v=LlEUX4b9hVE","yt": "LlEUX4b9hVE","dur": "5:35","month": "Sep 2025","short": false},{"title": "Cocoa Prices Are Dropping — Who's Benefiting from This?","url": "https://www.youtube.com/watch?v=NrqviEBM2o0","yt": "NrqviEBM2o0","dur": "1:39","month": "Sep 2025","short": false},{"title": "Gravita India: India's Recycling Giant Set to Explode? | Stock Analysis 2025","url": "https://www.youtube.com/watch?v=QNwRLLAwKdQ","yt": "QNwRLLAwKdQ","dur": "4:10","month": "Jul 2025","short": false}]}</script>
+<script>
+const DB=JSON.parse(document.getElementById('db').textContent);
+const blogs=DB.blogs, videos=DB.videos;
+const counts={}; blogs.forEach(b=>counts[b.cat]=(counts[b.cat]||0)+1);
+const cats=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+const NB=blogs.length, NV=videos.length, NT=NB+NV;
+
+/* ticker */
+(function(){
+  const items=[`${NT} PUBLISHED WORKS`,
+    ...cats.map(c=>`${c.toUpperCase()}: ${counts[c]}`),
+    `${NV} FILMS`,'NISM SERIES XV','BENGALURU · INDIA'];
+  const half=items.map(t=>`<span><i>◆</i>${t}</span>`).join('');
+  document.getElementById('tape').innerHTML=half+half;
+})();
+
+document.getElementById('issue').innerHTML=
+ `<span><b>${NT}</b> PUBLISHED WORKS</span><i>&middot;</i><span><b>${NB}</b> RESEARCH NOTES</span><i>&middot;</i><span><b>${NV}</b> FILMS</span><i>&middot;</i><span><b>${cats.length}</b> DESKS</span><i>&middot;</i><span><b>NISM</b> SERIES&nbsp;XV</span>`;
+document.getElementById('fnote').textContent=
+ `PRAVEEN GEORGE · CAPITAL MARKETS RESEARCH · ${NT} PUBLISHED WORKS · 2025-2026`;
+
+let tab='blogs', cat='All', q='';
+const view=document.getElementById('view'), chipsEl=document.getElementById('chips'),
+      live=document.getElementById('live'), qEl=document.getElementById('q');
+const esc=s=>(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const hit=t=>!q||t.toLowerCase().includes(q);
+
+let io=null;
+function observe(){
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.io').forEach(e=>e.classList.add('in'));return}
+  if(io)io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.05});
+  document.querySelectorAll('.io:not(.in)').forEach(e=>io.observe(e));
+}
+
+function chips(){
+  if(tab!=='blogs'){chipsEl.style.display='none';return}
+  chipsEl.style.display='flex';
+  let h=`<span class="chip ${cat==='All'?'on':''}" data-c="All">All<b>${NB}</b></span>`;
+  cats.forEach(c=>h+=`<span class="chip ${cat===c?'on':''}" data-c="${esc(c)}">${esc(c)}<b>${counts[c]}</b></span>`);
+  chipsEl.innerHTML=h;
+  chipsEl.querySelectorAll('.chip').forEach(el=>el.onclick=()=>{cat=el.dataset.c;render()});
+}
+
+function rBlogs(){
+  const gs=cat==='All'?cats:[cat]; let n=0,shown=0,h='';
+  gs.forEach(c=>{
+    const items=blogs.filter(b=>b.cat===c&&hit(b.title));
+    if(!items.length)return;
+    n++;shown+=items.length;
+    h+=`<section class="sec io"><div class="sec-head"><span class="sec-no">${String(n).padStart(2,'0')}</span><h2>${esc(c)}</h2><span class="sec-ct">${items.length} ${items.length===1?'note':'notes'}</span></div>`;
+    items.forEach(b=>h+=`<a class="row" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="rdate">${esc(b.date)}</span><span class="rtitle">${esc(b.title)}</span><span class="rgo">&#8599;</span></a>`);
+    h+=`</section>`;
+  });
+  view.innerHTML=h||`<div class="empty">No research notes match &ldquo;${esc(q)}&rdquo;.</div>`;
+  live.textContent=`${shown} / ${NB} notes`;
+}
+
+function rVids(){
+  const items=videos.filter(v=>hit(v.title));
+  live.textContent=`${items.length} / ${NV} films`;
+  if(!items.length){view.innerHTML=`<div class="empty">No films match &ldquo;${esc(q)}&rdquo;.</div>`;return}
+  const pal=['vp-a','vp-b','vp-c','vp-d'];
+  let h='<div class="vgrid">';
+  items.forEach((v,i)=>{
+    const badge=v.short?'SHORT':(v.dur?esc(v.dur):'');
+    h+=`<a class="vcard io" href="${esc(v.url)}" target="_blank" rel="noopener">
+      <div class="vp ${pal[i%4]}"></div>
+      ${v.yt?`<img class="vimg" loading="lazy" referrerpolicy="no-referrer"
+         src="https://i.ytimg.com/vi/${esc(v.yt)}/hqdefault.jpg" alt=""
+         onload="this.classList.add('ok')" onerror="this.remove()">`:''}
+      <div class="vscrim"></div>
+      <div class="vtop"><span class="vmonth">${esc(v.month||'')}</span>${badge?`<span class="vdur">${badge}</span>`:''}</div>
+      <div class="vplay"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></div>
+      <div class="vtitle">${esc(v.title)}</div></a>`;
+  });
+  view.innerHTML=h+'</div>';
+}
+
+function render(){
+  document.getElementById('tb').classList.toggle('on',tab==='blogs');
+  document.getElementById('tv').classList.toggle('on',tab==='videos');
+  qEl.placeholder=tab==='blogs'?`Search ${NB} research notes\u2026`:`Search ${NV} films\u2026`;
+  chips(); tab==='blogs'?rBlogs():rVids(); observe();
+}
+document.getElementById('tb').onclick=()=>{tab='blogs';render()};
+document.getElementById('tv').onclick=()=>{tab='videos';render()};
+document.querySelectorAll('[data-tab]').forEach(el=>el.addEventListener('click',()=>{
+  tab=el.dataset.tab; if(tab==='blogs')cat='All';
+  render();
+  document.getElementById('register').scrollIntoView({behavior:'smooth'});
+}));
+let t;qEl.addEventListener('input',e=>{clearTimeout(t);t=setTimeout(()=>{q=e.target.value.trim().toLowerCase();render()},90)});
+render();
+</script>
+</body>
+</html>
